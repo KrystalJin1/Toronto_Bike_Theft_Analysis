@@ -1,0 +1,2001 @@
+Theft_Status,Occurrence_Hour,Occurrence_Month,Premises_Type,Bike_Cost,Region
+0,21,8,House,2792.95,Toronto
+1,23,7,House,863.57,Toronto
+0,22,7,Educational,3503.13,Toronto
+0,8,8,House,3514.49,North York
+0,23,7,Educational,3815.26,Midtown
+0,10,11,Outside,3518.36,Midtown
+0,3,6,Educational,3654.58,North York
+1,4,9,Educational,1112.26,Downtown
+1,5,5,Commercial,1560.64,Scarborough
+0,18,7,Educational,2569.89,Midtown
+0,6,6,Commercial,467.61,Downtown
+0,8,5,Commercial,2163.2,Toronto
+1,18,10,Educational,3870.04,North York
+0,13,6,Apartment,4552.76,Downtown
+0,0,6,House,709.16,Downtown
+1,4,10,House,2365.87,Midtown
+1,15,7,Educational,4886.41,Midtown
+0,19,9,Outside,100.63,Downtown
+1,22,9,House,3247.7,Scarborough
+0,18,9,Commercial,2526.14,Midtown
+0,5,10,Other,1475.81,Toronto
+1,23,9,Educational,2749.07,North York
+0,12,10,Commercial,4405.25,Toronto
+0,19,9,Transit,2630.41,Midtown
+0,21,8,House,2514.27,Midtown
+1,20,5,House,4221.82,Toronto
+0,3,7,Transit,2765.61,Downtown
+0,7,9,Commercial,4169.97,North York
+0,12,8,Educational,2905.6,Toronto
+1,0,7,Other,2635.02,Midtown
+0,15,7,Commercial,533.07,Scarborough
+0,23,6,Commercial,724.49,Toronto
+0,11,7,Commercial,3566.22,Toronto
+1,17,7,Outside,3284.26,Downtown
+0,10,10,Outside,3874.21,Toronto
+0,10,10,Outside,4369.64,Downtown
+0,17,6,Transit,2346.35,North York
+0,13,7,House,1360.19,Downtown
+0,14,6,Educational,4370.74,Downtown
+0,4,6,House,1102.37,North York
+0,7,9,Apartment,2807.7,North York
+0,6,6,Outside,330.65,Toronto
+1,1,8,Educational,614.29,Scarborough
+0,14,7,Educational,4075.31,Scarborough
+0,15,4,Apartment,3504.91,North York
+1,1,5,Other,96.62,Scarborough
+0,10,9,Educational,3171.13,Downtown
+0,8,10,House,367.83,Midtown
+0,23,5,Outside,3798.79,North York
+1,8,9,Commercial,4729.86,Midtown
+0,21,6,Other,1326.15,North York
+0,1,10,Apartment,3318.98,Toronto
+0,8,8,Transit,3986.5,North York
+0,11,2,Other,2587.33,Midtown
+0,15,4,House,1141.17,Toronto
+0,16,10,Apartment,128.98,Midtown
+0,20,3,Educational,2273.03,Midtown
+1,16,10,House,2679.32,Midtown
+0,10,2,Transit,4077.68,Toronto
+1,13,6,House,2705.32,Scarborough
+0,9,7,Educational,4208.91,Downtown
+1,13,7,Educational,906.02,Midtown
+1,5,8,Transit,933.07,Toronto
+0,6,6,Outside,4603.61,North York
+1,11,12,Other,4179.26,North York
+0,7,4,Educational,2955.86,North York
+0,22,12,Transit,2392.49,Midtown
+1,21,9,Other,4095.26,North York
+0,11,9,Outside,2331.28,North York
+0,9,8,Commercial,3031.73,North York
+0,17,8,Transit,582.24,Midtown
+0,4,7,Educational,2577.9,Toronto
+1,23,7,Educational,1623.89,Toronto
+0,18,7,Educational,1110.5,North York
+1,14,9,Transit,2499.23,North York
+0,4,9,Apartment,1495.79,North York
+1,9,11,Transit,1875.44,Toronto
+1,19,5,Commercial,3680.75,Downtown
+0,11,9,Other,3699.33,Scarborough
+1,0,6,Other,1536.27,North York
+0,21,11,Outside,3985.39,North York
+1,20,6,Other,4020.64,North York
+0,4,8,Educational,3854.69,Downtown
+0,10,10,Educational,2195.36,Downtown
+1,5,2,Outside,1669.59,Downtown
+0,1,9,Apartment,1653.34,Midtown
+0,20,3,Outside,2864.52,Downtown
+1,10,8,Commercial,2618.14,North York
+1,11,7,Educational,1919.59,Toronto
+0,2,7,Commercial,2632.9,Midtown
+0,2,3,Educational,1896.71,Toronto
+0,16,11,Transit,3978.92,Toronto
+0,13,11,Educational,4214.48,Midtown
+1,22,8,Apartment,4062.58,North York
+0,19,11,Educational,2176.54,Downtown
+1,17,6,Other,4192.34,North York
+1,19,5,Other,2138.09,Scarborough
+1,3,9,Apartment,4978.6,Toronto
+1,7,2,Apartment,4075.3,Toronto
+0,23,10,Transit,3778.8,Midtown
+1,1,7,House,717.78,Downtown
+0,17,10,Commercial,4102.96,North York
+1,8,10,Other,1856.39,Toronto
+1,4,8,Other,4972.33,Toronto
+0,15,6,Other,1265.97,Downtown
+0,16,9,Apartment,2748.84,Midtown
+1,13,6,House,831.66,Scarborough
+0,0,6,Other,4466.02,Toronto
+0,7,8,Other,2280.11,Toronto
+0,9,9,Other,3425.41,North York
+0,19,7,Apartment,1480.35,Downtown
+1,8,7,Transit,4100.76,Midtown
+0,15,6,Commercial,3970.2,Downtown
+0,19,4,Transit,2902.55,Scarborough
+1,22,3,Commercial,4441.03,Toronto
+0,10,5,Outside,176.3,Scarborough
+0,9,9,Commercial,3345.12,Midtown
+0,8,4,Apartment,4643.66,Toronto
+0,1,4,House,2943.06,Scarborough
+1,11,5,Educational,2550.81,Downtown
+0,3,4,Outside,479.55,Toronto
+0,14,8,Apartment,2316.27,North York
+1,3,7,Outside,4990.43,Midtown
+1,9,11,Commercial,1419.65,Scarborough
+0,13,2,House,1184.66,Midtown
+0,12,8,Commercial,3334.35,Toronto
+0,8,10,Other,4296.9,Scarborough
+0,9,11,Educational,1573.53,Midtown
+0,2,7,Transit,4136.65,Scarborough
+0,0,6,Transit,1228.4,Toronto
+1,17,6,Commercial,4852.68,North York
+0,22,9,Commercial,170.26,North York
+0,13,4,House,2368.96,Midtown
+1,0,6,Educational,3522.99,Midtown
+0,18,4,Outside,570.57,Midtown
+1,12,8,House,4499.43,Toronto
+1,18,2,Outside,3208.6,Scarborough
+0,18,6,Outside,2739.5,North York
+0,8,1,Commercial,1871.78,Downtown
+1,18,7,Educational,818.79,North York
+0,0,7,Other,2297.96,Scarborough
+1,13,7,Commercial,3883.09,Midtown
+0,4,8,Commercial,1761.92,North York
+1,5,9,Transit,3366.64,Downtown
+0,17,10,House,765.38,Scarborough
+0,11,8,Other,645.7,Downtown
+1,21,5,Apartment,1821.99,Scarborough
+0,14,10,Apartment,1770.29,North York
+1,18,9,Educational,4786.03,Scarborough
+0,20,9,Educational,4517.22,Toronto
+0,4,11,Educational,3099.67,Toronto
+1,21,8,Transit,1168.27,Toronto
+0,23,6,Educational,390.61,Downtown
+0,11,8,Transit,4746.72,Scarborough
+0,17,2,Transit,3092.61,Toronto
+0,19,7,House,4517.84,Toronto
+1,15,7,Outside,3112.16,Midtown
+0,3,8,Educational,414.27,North York
+0,17,3,Educational,1729.44,Scarborough
+1,8,5,Other,921.94,North York
+0,14,5,Educational,2461.76,Scarborough
+0,3,1,Educational,2273.83,Midtown
+1,8,9,Outside,1345.45,North York
+0,6,11,Outside,1079.09,North York
+1,13,7,Commercial,1872.32,Downtown
+0,10,3,Educational,276.44,North York
+0,7,10,Other,2397.46,North York
+1,17,10,Transit,1283.03,North York
+0,19,4,Apartment,4720.69,Toronto
+0,5,1,Other,3528.86,Toronto
+0,16,6,House,1485.7,Toronto
+0,1,8,House,2532.45,North York
+0,10,8,Outside,4046.55,North York
+0,14,7,House,703.96,Scarborough
+0,19,9,Educational,2625.85,Scarborough
+0,22,5,House,1452.9,Midtown
+1,1,8,Transit,3355.32,Scarborough
+1,4,6,Educational,4529.41,Scarborough
+0,18,9,Outside,1846.75,Midtown
+1,16,12,House,2322.52,Midtown
+1,7,10,House,420.69,Midtown
+1,5,6,Commercial,1569.26,Downtown
+1,0,9,Other,2391.44,Downtown
+1,22,8,Transit,2263.59,Scarborough
+1,9,11,Educational,2325.31,Midtown
+1,12,8,Outside,2939.06,Midtown
+1,16,6,Outside,3261.36,Scarborough
+1,16,7,Other,1780.43,Midtown
+0,17,10,House,1074.8,Toronto
+1,2,9,Educational,3739.56,Downtown
+0,10,8,Transit,768.7,Toronto
+0,10,7,Transit,4593.57,Downtown
+1,13,5,Outside,674.25,Downtown
+1,14,5,Outside,720.76,Scarborough
+0,15,9,Outside,77.6,Downtown
+0,0,5,Other,2799.92,Scarborough
+0,17,9,Commercial,3636.51,Downtown
+0,13,6,Outside,496.84,Downtown
+0,4,9,Other,1654.23,Toronto
+1,9,8,Apartment,182.11,Toronto
+1,8,1,Commercial,1137.38,Midtown
+0,19,4,Transit,618.71,Midtown
+0,0,2,Commercial,3737.59,North York
+0,16,8,Educational,2407.7,North York
+1,15,3,Apartment,2078.6,Toronto
+0,10,9,Other,3952.85,Toronto
+0,20,6,Educational,3887.7,North York
+1,3,7,House,4669.52,Scarborough
+0,14,6,Outside,582.68,North York
+1,15,1,Commercial,2534.08,Downtown
+0,15,11,Transit,2722.2,Downtown
+1,7,8,Apartment,4175.63,Scarborough
+0,13,10,Apartment,4956.79,North York
+1,12,9,Transit,234.99,Scarborough
+0,12,7,House,4277.16,Downtown
+0,1,11,Outside,3671.5,Scarborough
+0,21,11,Commercial,170.64,Downtown
+0,1,8,Transit,2816.52,Toronto
+1,13,1,Commercial,2443.21,Toronto
+0,3,3,Educational,4091.34,Downtown
+1,14,4,Transit,3953.48,Midtown
+0,6,10,Other,423.67,Scarborough
+0,18,8,Other,2806.03,North York
+0,16,3,Transit,1234.72,Scarborough
+0,17,8,Transit,2064.16,Midtown
+1,1,9,Outside,2840.27,Downtown
+1,12,11,Outside,964.31,North York
+0,9,11,Outside,4945.88,North York
+0,4,6,Commercial,4020.18,North York
+1,15,2,House,105.48,Midtown
+0,8,8,House,534.74,Scarborough
+1,7,3,Outside,3921.08,Midtown
+1,22,8,Commercial,4612.04,Downtown
+1,8,8,Apartment,4066.07,North York
+1,7,8,Commercial,3840.85,Downtown
+1,6,5,Educational,1136.88,Midtown
+0,1,7,Commercial,2533.21,North York
+1,7,11,Apartment,3613.34,North York
+1,0,9,Commercial,1345.02,Midtown
+1,19,9,Outside,265.19,Midtown
+0,9,10,Commercial,2934.19,Downtown
+1,20,4,Apartment,2480.33,Midtown
+1,9,7,Commercial,1558.6,Downtown
+1,15,8,Outside,1541.13,Toronto
+0,19,4,Outside,3117.65,Toronto
+1,12,10,Commercial,3382.23,North York
+1,7,7,Educational,1287.45,North York
+0,3,5,Outside,3463.55,Downtown
+1,7,12,Other,330.49,Midtown
+0,1,8,Other,183.44,North York
+1,14,7,Other,1866.63,Scarborough
+1,4,8,Transit,2491.04,Toronto
+1,11,6,Other,4187.76,North York
+0,20,5,House,2427.56,Toronto
+1,7,9,Transit,2687.56,Midtown
+1,1,7,Commercial,3413.52,Downtown
+0,21,8,Transit,2804.1,Scarborough
+0,11,3,Educational,3216.45,Scarborough
+0,11,7,Apartment,1110.29,Toronto
+1,2,5,Other,4787.38,Scarborough
+1,3,7,Outside,2258.46,Downtown
+0,3,4,Other,202.32,Midtown
+0,9,8,Other,4084.17,Toronto
+1,18,8,Commercial,370.34,North York
+1,19,5,Transit,206.84,North York
+1,8,8,House,1169.49,Scarborough
+0,16,9,Apartment,3548.94,Scarborough
+1,15,6,Transit,3951.99,Scarborough
+1,14,10,Other,2735.63,Midtown
+0,3,10,Commercial,3357.89,Midtown
+0,4,4,Transit,2173.41,Scarborough
+0,18,8,Educational,1271.69,Scarborough
+1,4,10,House,1522.07,Toronto
+1,10,5,Other,447.73,North York
+1,18,9,House,3819.28,Downtown
+0,9,7,Commercial,1501.2,Toronto
+1,9,8,Commercial,584.69,Toronto
+0,12,4,Educational,1555.19,Midtown
+0,13,9,Other,4269.6,Toronto
+1,0,11,Transit,401.81,Downtown
+1,1,5,Transit,4693.04,Midtown
+0,17,7,Apartment,2420.96,North York
+1,22,7,Apartment,3462.2,Downtown
+0,5,12,Other,2021.82,Toronto
+1,0,10,Commercial,4042.71,Scarborough
+1,12,5,Commercial,3342.5,Downtown
+1,17,9,House,1574.32,Scarborough
+1,11,8,Transit,4293.49,North York
+0,17,5,Transit,1815.78,Downtown
+0,18,9,Commercial,2567.56,Scarborough
+0,5,7,Outside,4245.7,North York
+0,18,5,Outside,2185.62,Midtown
+1,6,10,House,2012.34,North York
+1,0,5,Commercial,416.99,Scarborough
+0,18,9,House,765.01,Midtown
+1,3,12,Outside,2232.8,North York
+1,1,5,Commercial,4089.28,Scarborough
+1,1,8,Commercial,4550,Midtown
+0,20,5,Apartment,4840.01,North York
+1,19,7,Outside,4423.26,Midtown
+0,7,3,Transit,3720.15,Downtown
+0,14,10,Apartment,4861.18,Midtown
+1,12,8,Other,2196.04,Midtown
+1,4,9,Educational,918.85,North York
+0,15,1,House,4723.56,Midtown
+0,22,4,Educational,4188.3,Scarborough
+1,14,3,Outside,4370.85,Toronto
+0,11,9,Educational,1954.87,North York
+0,0,7,Commercial,4994.9,Midtown
+0,8,9,Apartment,3248.87,Scarborough
+1,20,11,Apartment,280.69,Downtown
+1,18,9,Outside,1043.78,Downtown
+0,19,9,Transit,2989.61,Downtown
+1,18,12,Transit,3953.62,North York
+1,12,10,Commercial,251.05,North York
+1,12,7,Outside,4149.38,Downtown
+1,13,9,Apartment,4392.15,North York
+1,8,10,Educational,259.89,Toronto
+1,3,4,House,3196.57,Toronto
+0,21,7,Other,2454.67,Toronto
+1,10,7,Apartment,1148.8,Midtown
+0,14,10,Commercial,2974.2,Scarborough
+0,21,3,Educational,2851.78,Toronto
+0,21,3,Educational,4691.92,North York
+1,21,7,Other,4034.38,Toronto
+0,12,9,Commercial,1531.39,Midtown
+1,11,9,Commercial,722.02,Scarborough
+0,6,8,Other,4073.59,Downtown
+0,9,4,Commercial,4042.91,Scarborough
+0,0,7,Commercial,3143.03,North York
+0,20,6,Educational,3339.56,Downtown
+0,12,8,Outside,2214.5,North York
+0,7,5,Other,4145.55,Toronto
+1,4,9,Other,1698.95,Midtown
+1,2,10,Outside,2862.42,Toronto
+0,14,6,Educational,1909.72,North York
+0,20,9,Educational,1073.36,North York
+0,8,5,Apartment,4870.69,North York
+0,2,1,Educational,922.75,Scarborough
+0,21,8,Other,680.44,Scarborough
+1,10,7,House,3767.05,Midtown
+1,22,7,Commercial,3614.49,North York
+0,8,10,Apartment,3714.4,Downtown
+0,8,7,Outside,2598.33,Scarborough
+0,1,5,Transit,3625.04,North York
+0,20,9,Transit,662.43,Midtown
+0,15,5,Other,2222.51,Downtown
+1,17,10,Commercial,305.27,North York
+1,21,1,House,232.64,Midtown
+1,20,7,Outside,2129.51,Midtown
+1,21,5,House,307.72,North York
+0,8,6,House,1590.04,Toronto
+0,23,6,Transit,3773.24,Downtown
+1,21,7,House,844.63,Scarborough
+0,14,10,Other,3696.99,Downtown
+1,15,10,Educational,1906.34,Downtown
+0,23,9,House,1774.17,Downtown
+1,2,8,Commercial,240.51,Scarborough
+1,2,5,Educational,2272.11,Midtown
+0,1,8,House,3684.68,North York
+0,1,3,Outside,2401.86,Downtown
+0,20,8,Educational,4117.28,Scarborough
+0,9,9,Commercial,1971.65,Midtown
+0,10,1,House,2440.89,Toronto
+0,1,4,Educational,2202.14,Scarborough
+1,4,8,Commercial,1706.71,Scarborough
+1,10,10,Outside,2661.04,North York
+0,11,9,House,2516.33,North York
+1,21,1,House,788.51,North York
+0,22,9,Transit,3766.6,Toronto
+0,12,3,Commercial,2358.79,Downtown
+0,4,6,Educational,2555.81,North York
+0,14,9,Transit,1830.64,Midtown
+0,14,10,Outside,2875.94,Scarborough
+0,21,3,Transit,1466.25,Downtown
+0,1,9,House,2211.95,Toronto
+0,20,7,Educational,1183.34,North York
+0,11,10,Outside,4930.84,Midtown
+1,10,7,Commercial,3069.01,Downtown
+1,3,9,Educational,3953.4,Toronto
+0,12,6,House,129.04,North York
+1,17,8,Other,2694.9,Toronto
+0,11,7,House,2366.49,Downtown
+0,19,10,House,2184.41,North York
+1,8,8,Commercial,3744.65,Downtown
+1,13,8,Commercial,4986.94,Midtown
+0,3,11,Transit,3400.67,Scarborough
+1,19,7,Educational,3990.88,Toronto
+0,16,7,Commercial,2232.22,Midtown
+1,8,8,Transit,439.66,Midtown
+0,12,2,Commercial,855.82,Midtown
+0,0,10,Transit,2208.26,North York
+0,8,3,Other,3022.36,North York
+1,6,10,Commercial,4460.28,Midtown
+1,16,8,Educational,2534.34,Downtown
+1,8,6,House,873.72,Toronto
+1,19,11,Educational,4560.61,North York
+1,21,6,Commercial,4368.75,Downtown
+0,1,5,Other,4449.58,Toronto
+0,21,7,Commercial,3454.62,Midtown
+1,21,3,Outside,1707.58,North York
+0,19,7,Apartment,4997.8,Toronto
+0,0,12,Outside,4380.62,Midtown
+1,0,6,Transit,2287.76,Downtown
+1,1,8,Other,2571.21,Downtown
+0,14,10,Commercial,809.98,North York
+1,23,7,House,2375.52,Toronto
+1,4,9,Apartment,3194.46,Toronto
+0,13,5,Other,3130.76,Downtown
+0,16,8,House,2929.67,Midtown
+0,20,10,Apartment,3861.6,Toronto
+0,20,4,Educational,817.22,Toronto
+0,12,6,Other,1802.16,Toronto
+0,21,6,Outside,4792.58,Scarborough
+1,10,5,Transit,2292.45,Toronto
+0,21,7,House,436.78,North York
+0,0,9,Other,2698.85,Toronto
+1,7,5,Apartment,1994.01,Midtown
+1,23,2,Other,3414.75,Downtown
+0,10,2,Commercial,2778.99,Toronto
+0,16,5,Other,3803.89,Downtown
+1,23,4,Other,4905.71,Scarborough
+0,15,8,Outside,564.56,Downtown
+0,21,6,Educational,2363.08,Toronto
+1,8,8,Outside,2471.25,North York
+0,12,9,Transit,854.48,Midtown
+1,22,11,Transit,3178.4,Toronto
+1,5,9,Educational,771.93,Scarborough
+0,21,6,House,1647.99,North York
+1,18,8,Outside,4865.22,Toronto
+1,21,9,Transit,1439.82,Downtown
+1,12,8,Outside,3679.22,North York
+0,18,6,Outside,664.38,Scarborough
+0,2,8,Educational,3654.07,Toronto
+1,10,10,House,3926.33,Scarborough
+0,0,1,Outside,401.17,Downtown
+0,14,5,Transit,4494.9,North York
+1,13,8,House,621.76,Toronto
+1,7,10,Other,4490.04,Scarborough
+1,22,7,Outside,258.69,Toronto
+0,11,7,Educational,3382.27,North York
+0,20,11,Apartment,2461.74,Scarborough
+0,13,7,House,2359.75,Scarborough
+0,14,9,Transit,4399.75,Toronto
+0,17,8,House,399.13,Toronto
+0,2,8,House,3882.49,North York
+0,19,8,Apartment,485.42,Scarborough
+0,4,8,Transit,185.18,Downtown
+0,11,8,Transit,2741.97,Scarborough
+1,5,6,Apartment,629.04,Downtown
+1,13,8,Outside,3096.14,North York
+1,23,11,Outside,4825.24,Midtown
+1,19,4,Educational,1913.4,North York
+1,23,9,House,4750.66,Scarborough
+1,1,6,Educational,3350.26,Toronto
+1,3,6,Apartment,1411.2,Midtown
+1,17,8,Commercial,4826.63,Toronto
+0,13,7,House,3291.17,Toronto
+0,15,2,Other,3860.66,Toronto
+1,5,7,Commercial,4404.91,North York
+0,14,10,Educational,3829.75,North York
+0,17,9,House,2157.64,Scarborough
+1,14,8,Commercial,159.48,Downtown
+1,6,9,Commercial,1361.33,Scarborough
+0,19,10,House,227.79,Downtown
+0,0,5,Outside,2238.13,Toronto
+1,8,7,Transit,4676.43,North York
+1,0,5,House,4448.41,North York
+0,10,5,Commercial,2712.52,Toronto
+1,11,3,House,1958.36,Downtown
+0,11,10,Transit,2753.59,Midtown
+0,18,10,Outside,1231.26,Midtown
+1,22,4,Other,2649.14,Scarborough
+0,23,5,Other,4645.63,North York
+0,10,7,Transit,3637.44,Toronto
+1,14,9,Apartment,2483.99,Downtown
+1,23,3,Apartment,1170.77,North York
+1,16,10,Other,1649.56,Toronto
+0,19,9,Outside,956.03,Downtown
+0,6,9,Apartment,4153.7,North York
+0,18,6,Apartment,3224.49,Downtown
+0,1,10,Commercial,3072.59,North York
+0,7,7,Transit,3865.06,Scarborough
+1,2,5,Apartment,2990.82,Scarborough
+1,19,5,Apartment,2802.61,North York
+1,11,5,Other,3857.47,Downtown
+0,2,9,Other,804.71,Toronto
+0,8,6,Educational,413.16,Toronto
+0,19,7,Educational,1343.91,Downtown
+1,12,3,Apartment,2353.29,Scarborough
+0,23,8,Other,2284.38,North York
+0,19,10,Transit,4139.65,Downtown
+0,1,3,Commercial,4111.79,Toronto
+0,23,7,Outside,2844.8,North York
+1,15,4,Educational,2949.18,North York
+0,0,5,Transit,117.62,Toronto
+1,8,10,Outside,4044.51,Midtown
+1,2,9,Apartment,2494.19,Midtown
+1,5,8,House,192.18,North York
+1,10,10,Other,3357.43,Scarborough
+0,4,8,Educational,101.82,North York
+1,7,6,Other,2047.51,Downtown
+0,4,2,Outside,3168.99,Midtown
+0,10,10,Commercial,4879.83,Downtown
+0,8,7,Commercial,1423.42,Midtown
+1,10,10,Apartment,99.88,North York
+0,2,5,Educational,3347.05,Scarborough
+1,15,9,Commercial,1727.71,Toronto
+1,19,7,Educational,295.53,North York
+0,11,9,House,1535.94,North York
+1,5,8,Outside,677.59,Toronto
+0,11,10,House,2553.43,Midtown
+0,12,1,Transit,2099.71,North York
+1,4,9,House,1802.29,North York
+1,12,9,Other,787.14,Downtown
+1,23,7,Other,2082.9,Midtown
+0,14,1,Educational,3151.58,Scarborough
+1,7,9,Transit,1757.52,Midtown
+0,11,6,Apartment,3459.01,Downtown
+1,22,6,Transit,4040.36,North York
+0,7,3,Transit,778.38,Downtown
+0,17,7,Transit,1231.34,Toronto
+0,14,9,Educational,171.84,Scarborough
+0,12,7,Commercial,2982.95,Midtown
+1,10,9,Outside,4756.7,Midtown
+0,4,2,Other,190.12,Midtown
+0,22,7,Outside,4960.3,Toronto
+0,0,9,Educational,4357.82,Toronto
+0,10,1,House,1433.51,North York
+0,19,7,Educational,3065.54,Toronto
+0,6,8,Transit,2441.8,Downtown
+0,13,3,Apartment,2886.96,Scarborough
+1,22,8,Commercial,3985.62,Downtown
+0,7,9,Transit,560.72,Toronto
+1,11,6,House,4863.31,Toronto
+0,18,5,Apartment,2415.76,North York
+1,1,1,Transit,2272.96,Midtown
+0,6,5,Transit,1979.22,Toronto
+0,10,6,Transit,354.83,Toronto
+1,15,7,Other,4593.05,Downtown
+1,1,10,Transit,4895.69,Midtown
+0,21,3,Other,4968.41,Midtown
+0,23,8,Outside,3990.05,Toronto
+0,17,3,House,1473.6,Scarborough
+1,11,10,Other,1999.61,Scarborough
+0,17,3,House,1022.92,Downtown
+1,9,12,Other,2489.65,Toronto
+1,9,11,Educational,1275.33,Downtown
+1,4,10,Outside,1919.3,Scarborough
+1,7,7,Outside,237.24,Toronto
+0,20,5,Outside,2475.97,Downtown
+1,21,7,Transit,2500.54,North York
+0,17,6,Other,1240.09,North York
+0,5,11,Commercial,1013.55,Midtown
+1,14,8,House,3992.95,Midtown
+1,10,4,House,3405.65,Downtown
+0,1,5,Commercial,4986.58,Midtown
+0,0,10,Other,196.49,North York
+0,19,7,Other,4438.58,Midtown
+0,0,3,Commercial,505.78,Downtown
+1,23,7,Transit,2917.31,Midtown
+0,10,5,Educational,2369.44,Toronto
+1,20,10,Apartment,1587.29,Toronto
+0,5,3,House,1408.66,Scarborough
+0,23,9,Educational,1589.8,Toronto
+0,8,7,Commercial,921.65,Downtown
+0,15,5,Commercial,1298.76,Midtown
+1,21,5,Apartment,3809.75,Downtown
+0,2,9,Transit,4807.36,Downtown
+0,3,10,Outside,240.11,North York
+0,21,4,Educational,74.05,Downtown
+0,20,6,Transit,2867.37,Midtown
+1,2,7,Transit,1642.99,North York
+0,13,10,Apartment,2471.84,Toronto
+1,6,1,Other,2939.1,Midtown
+1,9,7,House,4263.17,North York
+1,9,9,Commercial,4157.21,Scarborough
+1,14,10,House,2322.51,North York
+1,5,5,Transit,1803.26,Midtown
+0,12,6,Educational,2352.81,North York
+1,3,3,Other,2363.38,Midtown
+1,12,3,Educational,4520.67,Midtown
+0,18,5,Educational,1120.33,Downtown
+0,16,8,Commercial,1608.52,North York
+0,14,9,Other,1975.23,Midtown
+1,21,7,Apartment,2143.94,Downtown
+0,5,11,Educational,749.41,North York
+0,19,8,House,3936.21,Scarborough
+0,2,8,House,769.59,Downtown
+0,5,11,Commercial,4062.86,Toronto
+0,22,10,Outside,4780.55,Toronto
+1,22,11,Educational,2162.09,Toronto
+1,19,10,Outside,3448.37,Midtown
+1,9,8,Other,431.69,Midtown
+0,21,9,Commercial,2984.5,Toronto
+0,13,9,Apartment,884.6,North York
+0,11,8,Commercial,3059.64,Midtown
+0,22,10,Other,4382.75,North York
+1,18,8,Commercial,2049.7,Scarborough
+0,10,5,House,4670.48,Toronto
+0,4,11,Outside,4360.64,Scarborough
+1,18,6,House,3423.44,Toronto
+0,21,7,Educational,2712.93,Scarborough
+0,1,8,House,986.27,Midtown
+0,22,6,Other,2725.95,Toronto
+0,13,5,Commercial,4388.76,North York
+0,8,11,Educational,4567.08,Toronto
+1,2,7,House,4110.03,Midtown
+1,0,8,Educational,605.09,Toronto
+0,21,7,Commercial,3611.06,Midtown
+0,4,12,House,3059.3,Midtown
+1,16,4,Other,4551.33,Toronto
+0,23,3,House,1414.76,Scarborough
+1,12,5,Outside,1856.07,Midtown
+0,19,9,Outside,3628.26,Toronto
+0,1,3,House,3362.58,Midtown
+0,7,5,Transit,1975.01,Scarborough
+1,19,3,Commercial,2149.87,Scarborough
+1,19,7,Commercial,1732.83,Toronto
+0,20,5,Other,2207.48,North York
+1,16,6,House,2711.34,Toronto
+0,21,8,Outside,4232.37,Downtown
+0,22,9,Other,4001.22,Midtown
+0,23,8,Outside,3380.4,Downtown
+0,22,9,Transit,622.36,Midtown
+0,2,6,Apartment,487.58,Midtown
+0,3,5,Apartment,1839.08,Downtown
+0,12,7,Other,136,Scarborough
+1,21,8,Educational,3997.32,Toronto
+0,11,8,Apartment,743.52,North York
+1,7,10,Apartment,2388.53,Midtown
+1,13,8,Educational,4414.66,Scarborough
+0,7,5,Educational,2954.41,Midtown
+1,17,10,Outside,959.76,Toronto
+0,10,6,Apartment,1119.28,Downtown
+0,23,6,House,1621.54,Scarborough
+0,15,6,House,4983.83,Scarborough
+0,19,7,Transit,3562.71,Downtown
+0,12,1,Apartment,294.69,Downtown
+1,12,9,Apartment,2897.99,Downtown
+0,7,5,Commercial,4148.82,Toronto
+1,2,10,Outside,3487.76,Downtown
+0,3,11,Commercial,4777.54,Toronto
+1,22,9,Transit,53.73,Downtown
+0,2,3,Educational,1219.09,North York
+1,23,9,Educational,3483.9,Scarborough
+0,19,7,Commercial,4069.53,Toronto
+0,20,8,Outside,495.34,North York
+0,10,7,House,2673.58,North York
+0,8,4,Apartment,2643.8,North York
+1,23,9,Apartment,1966.75,Toronto
+0,5,10,House,1799.64,Toronto
+0,18,10,Commercial,477.22,Midtown
+1,19,3,Educational,1835.56,Toronto
+0,13,10,Outside,3189.97,Toronto
+1,7,10,Commercial,282.34,Scarborough
+0,23,9,Outside,2977.16,Midtown
+1,22,7,House,1531.65,Midtown
+0,23,6,Transit,2907.44,Midtown
+1,1,6,Commercial,2673.47,North York
+0,15,7,House,1881.31,Scarborough
+1,16,11,Commercial,4445.89,Midtown
+0,0,1,Outside,3907.8,Toronto
+0,6,6,Outside,336.72,Midtown
+0,12,11,House,1177.26,Midtown
+0,4,6,Commercial,3839.57,Downtown
+1,21,4,Transit,3669.18,Downtown
+0,16,1,Apartment,4645.65,Downtown
+1,3,3,Educational,4883.98,Toronto
+0,5,7,Transit,4114.74,North York
+1,8,8,Apartment,4062.87,Scarborough
+1,6,8,Apartment,838.79,Scarborough
+0,14,4,Other,2544.61,Downtown
+0,10,8,Outside,4396.59,Midtown
+0,9,4,Other,2278.59,Midtown
+1,10,7,Other,579.14,Scarborough
+1,6,6,Commercial,2642.35,Scarborough
+0,23,10,Apartment,2129.98,Midtown
+1,17,8,Commercial,835.71,North York
+0,18,5,Outside,4213.09,North York
+0,22,8,Educational,1262.87,Midtown
+0,10,8,Educational,4477.18,North York
+0,14,5,Transit,4464.36,Midtown
+0,12,5,Transit,3220.59,Scarborough
+0,3,5,Apartment,462.9,Scarborough
+0,0,10,Outside,1180.8,Downtown
+0,12,8,Educational,94.02,Downtown
+1,0,8,Educational,1123.8,Downtown
+0,18,6,Commercial,3301.79,North York
+0,14,6,House,4289.48,North York
+0,9,6,Commercial,943.41,Scarborough
+1,8,2,Transit,602.55,Toronto
+0,13,8,Outside,4931.23,Scarborough
+0,17,4,Apartment,1250.74,Scarborough
+0,19,1,Other,4222.85,Scarborough
+1,11,10,Outside,2067.09,Downtown
+0,19,5,Commercial,1698.18,Midtown
+0,22,6,Outside,2870.85,Midtown
+0,12,12,Apartment,739.02,Midtown
+0,1,6,Apartment,473.62,North York
+0,14,8,Commercial,2746.68,North York
+1,4,7,Commercial,961.5,Toronto
+0,22,8,Commercial,1536.81,Downtown
+0,3,5,House,970.24,North York
+1,5,10,Educational,4259.83,Midtown
+0,2,8,Educational,2380.34,Midtown
+0,17,7,Outside,155.17,North York
+1,5,5,Apartment,3382.56,Scarborough
+1,13,7,Educational,2376.18,Downtown
+0,17,3,Other,2838.62,Scarborough
+0,6,7,Outside,2410.32,Midtown
+0,7,3,Transit,498.46,Toronto
+0,10,8,Transit,1212.74,Downtown
+0,5,11,Commercial,1219.14,Midtown
+0,6,3,Commercial,1173.95,Scarborough
+0,0,8,Educational,4484.1,Midtown
+1,20,9,Outside,843.32,Downtown
+0,2,8,Outside,1558.25,Midtown
+0,19,7,Other,1414.39,Scarborough
+0,17,3,Outside,1555.98,Scarborough
+1,6,10,Outside,3534.17,Toronto
+1,9,5,Commercial,89.94,Downtown
+1,6,8,Apartment,4101.16,Scarborough
+0,4,7,Transit,187.14,North York
+0,0,9,Apartment,1808.02,Scarborough
+0,18,9,Apartment,2716.05,Downtown
+1,15,11,Apartment,2201.55,North York
+0,7,7,Outside,296.38,Midtown
+0,15,10,House,1955.05,Toronto
+1,11,10,Commercial,404.7,Toronto
+0,0,6,Educational,4846.57,Downtown
+0,22,8,Outside,642.92,Scarborough
+1,1,8,Outside,4945.85,Toronto
+1,23,9,Transit,361.96,Scarborough
+0,19,5,Educational,642.79,North York
+1,1,6,Commercial,2494.01,Downtown
+1,21,3,House,1140.65,Downtown
+0,7,5,Educational,3364.34,Toronto
+0,22,5,Outside,131,Scarborough
+0,18,9,Transit,3133.83,Scarborough
+1,21,5,Commercial,1632.06,Toronto
+1,8,6,Educational,4440.93,Downtown
+0,15,12,Educational,1673.35,Toronto
+0,11,9,Transit,651.97,Downtown
+0,18,5,Transit,4964,Scarborough
+1,12,10,Transit,2802.04,Midtown
+0,23,4,Apartment,3836.33,Toronto
+0,0,10,Other,2951.01,North York
+0,18,7,Commercial,365.54,Downtown
+1,18,7,Educational,1802.79,Downtown
+0,6,6,Commercial,4132.53,North York
+1,20,6,Commercial,1652.09,Midtown
+0,6,4,Transit,4303.03,North York
+1,15,7,Transit,4084.19,Toronto
+0,16,1,Outside,4777.27,North York
+1,11,9,Other,4983.13,Toronto
+0,20,6,Transit,2854.63,Downtown
+0,12,4,Other,942.92,Midtown
+0,22,10,Other,3851.8,Scarborough
+0,11,4,Other,1586.15,Toronto
+0,0,5,Educational,4365.72,Downtown
+1,23,8,Educational,4361.48,North York
+1,4,8,Educational,1224.15,North York
+1,11,4,Educational,4577.28,Downtown
+0,14,9,House,3264.65,Scarborough
+1,12,10,House,4785.98,Toronto
+0,20,8,Other,1745.37,North York
+0,17,11,Other,4097.48,Scarborough
+0,8,8,Outside,409.12,Toronto
+0,9,9,Transit,4428.73,Midtown
+0,5,5,House,4830.14,Scarborough
+1,12,5,Outside,2306.36,Downtown
+1,3,8,Commercial,4225.45,Midtown
+0,23,6,House,3000.96,Midtown
+0,2,8,House,2231.56,Scarborough
+1,2,8,Other,1877.53,Downtown
+0,4,6,Transit,4850.27,Downtown
+0,4,5,Transit,563.18,North York
+0,8,7,Commercial,4255.21,North York
+0,20,6,Educational,2029.76,Midtown
+1,4,5,Educational,1265.44,North York
+1,7,8,Transit,2368.35,Toronto
+0,12,7,Educational,4363.2,North York
+0,18,9,Commercial,863.45,Midtown
+1,4,9,Educational,3671.83,Midtown
+0,11,7,Transit,2221.8,Downtown
+1,1,10,Educational,123.54,Downtown
+1,9,9,Outside,4600.52,Downtown
+1,14,7,Transit,2285.98,Downtown
+0,10,7,Commercial,3613.86,Downtown
+0,9,9,House,562.65,Scarborough
+0,8,5,House,1675.78,Scarborough
+1,1,6,Educational,2040.22,Downtown
+0,13,5,House,80.7,Toronto
+0,6,7,Educational,1834.36,Midtown
+1,20,6,Apartment,87.94,Midtown
+1,6,6,Transit,2539.41,Toronto
+0,10,10,Educational,4941.4,Downtown
+1,0,6,Educational,1235.73,Midtown
+0,22,7,Apartment,749.38,Downtown
+1,3,8,Other,2607.28,Downtown
+1,21,9,Other,1142.08,Midtown
+1,5,4,Educational,4297.6,Midtown
+0,2,12,House,594.81,Toronto
+0,6,9,Outside,4502.8,Scarborough
+1,8,6,Educational,1805.19,Toronto
+1,0,1,Transit,4461.89,North York
+1,1,3,Commercial,4317.33,North York
+0,1,4,Other,295.58,North York
+0,4,6,Educational,4458.76,Downtown
+0,9,3,Other,4764.27,Downtown
+0,12,8,Outside,1573.09,Scarborough
+1,13,10,Transit,595.15,North York
+0,15,7,House,2949.68,Toronto
+0,0,2,Outside,105.87,Scarborough
+1,13,7,Educational,1843.98,Toronto
+1,17,9,House,469.04,Midtown
+1,7,5,Outside,2460.17,Midtown
+1,11,7,Educational,4257.74,Scarborough
+0,21,7,Educational,1715.63,Midtown
+1,5,9,Transit,3248.54,North York
+0,16,8,Other,3482.56,Downtown
+0,1,9,Outside,3909.7,Midtown
+0,5,8,Apartment,2107.9,Scarborough
+0,19,11,Educational,3043,Downtown
+0,0,6,Other,1804.55,Scarborough
+0,7,6,Other,350.49,Downtown
+1,0,8,Commercial,1843.45,Scarborough
+0,18,6,Educational,3395.86,North York
+1,19,7,Apartment,2655.72,Midtown
+0,7,12,Outside,4107.45,Midtown
+1,0,5,Other,4499.95,North York
+0,12,7,House,1592.39,Midtown
+0,6,6,House,4699.1,Midtown
+0,13,11,Transit,162.09,Midtown
+1,12,5,House,1862.93,Downtown
+1,20,4,Commercial,4436.36,Scarborough
+0,16,9,House,730.5,Midtown
+1,16,7,Outside,3898.74,Scarborough
+0,11,6,Outside,4598.07,Midtown
+1,10,9,House,309.7,North York
+0,4,3,Educational,4423.01,North York
+0,19,7,Other,1675.07,Downtown
+0,0,6,Educational,2465.55,North York
+0,17,10,Transit,1284.55,Downtown
+1,7,6,Transit,4140.92,North York
+1,8,11,Apartment,4290.52,Downtown
+0,5,11,Transit,3679.86,Midtown
+0,18,5,Transit,1473.74,Downtown
+0,4,7,Commercial,2693.52,Midtown
+0,19,4,Educational,3008.6,Toronto
+0,13,6,Other,2221.56,Midtown
+0,1,6,Apartment,4486.64,Midtown
+0,5,8,Commercial,3989.61,Toronto
+0,23,9,Outside,4251.46,Toronto
+1,5,5,Educational,1673.54,Midtown
+1,21,10,House,1528.35,Midtown
+0,23,8,Educational,2861.3,North York
+1,14,5,Educational,1974.8,Downtown
+1,20,5,Educational,3812.12,Midtown
+0,12,7,Educational,3769.98,Downtown
+0,19,7,Commercial,1082.47,Midtown
+0,2,8,Commercial,4223.41,Midtown
+1,16,11,House,363.9,Midtown
+0,6,6,Outside,4007.91,Midtown
+0,17,10,Other,4147.07,North York
+0,8,9,Transit,229.77,Downtown
+0,2,9,Other,2273.92,Midtown
+0,0,7,House,3768.91,Scarborough
+1,5,9,Apartment,1321.17,Toronto
+1,13,5,Other,2611.33,Midtown
+0,11,12,House,1146.81,Toronto
+0,0,7,Educational,2220.17,Midtown
+1,8,6,Commercial,4896.54,Toronto
+1,4,7,Commercial,3819.92,Midtown
+1,0,6,Apartment,577.04,Midtown
+0,16,6,House,4270.02,Scarborough
+0,3,5,Transit,2760.48,Scarborough
+1,7,8,Commercial,2482.46,Scarborough
+0,22,3,House,4907.05,Midtown
+0,14,7,Commercial,4195.03,Midtown
+0,20,7,House,2347.69,Toronto
+1,13,5,Apartment,3803.18,North York
+0,23,7,Apartment,1462.44,Scarborough
+0,0,4,Apartment,2264.49,Scarborough
+0,0,5,Other,4851.66,Midtown
+0,10,3,Apartment,2035.75,Downtown
+1,5,6,Outside,771.04,Downtown
+0,19,10,Transit,2377.24,Downtown
+0,19,2,Transit,2556.11,Downtown
+0,1,8,Transit,3285.33,Downtown
+0,20,6,Educational,1128.94,Midtown
+0,18,9,Other,1495.65,Downtown
+1,2,9,Other,2223.62,Scarborough
+1,0,7,Commercial,2697.26,North York
+0,15,5,Educational,3561.31,Downtown
+0,19,9,Apartment,3561.84,Scarborough
+0,15,9,Educational,3761.49,Downtown
+0,12,4,Educational,3829.7,Midtown
+0,6,3,Other,1289.1,Downtown
+1,2,6,Outside,563.51,Toronto
+0,14,6,Educational,1352.78,Scarborough
+1,16,6,Outside,2878.98,Scarborough
+0,0,4,Educational,3424.09,North York
+0,2,8,Outside,3822.11,Scarborough
+0,0,5,Other,4508.87,Toronto
+1,17,5,Transit,4798.27,Toronto
+0,21,5,Other,335.75,Downtown
+0,6,10,Transit,208.75,North York
+1,16,6,Outside,3536.86,Scarborough
+1,10,5,Transit,4607.02,Midtown
+1,11,5,Other,3564.16,North York
+1,1,4,Other,3657.88,Downtown
+1,0,6,Commercial,3494.02,Toronto
+1,23,9,Transit,264.88,North York
+0,23,10,House,4875.17,Downtown
+1,2,6,Outside,4939.11,Scarborough
+1,10,8,House,160.81,Scarborough
+0,15,9,Other,4127.83,Scarborough
+1,17,5,Apartment,126.11,Midtown
+1,13,8,Outside,1224,North York
+0,2,7,Transit,2992.79,Downtown
+0,7,6,Transit,4896.43,Downtown
+0,4,8,House,3900.48,Scarborough
+0,5,3,House,980.45,Toronto
+1,22,7,Other,613.97,Midtown
+1,23,7,House,1488.93,Midtown
+0,9,9,Other,2135.56,Downtown
+0,6,6,House,1447.58,Toronto
+1,20,9,Transit,656.37,Toronto
+0,9,8,Other,825.1,Scarborough
+0,11,5,Transit,2029.47,Midtown
+0,17,4,House,4140.62,Downtown
+1,21,9,Transit,2590.96,North York
+0,16,5,Educational,2423.82,Scarborough
+1,10,12,Transit,2358.65,Toronto
+1,5,7,House,761.18,Midtown
+1,23,10,Transit,2070.1,Toronto
+1,3,6,House,3862.62,Toronto
+0,10,7,Commercial,2476.22,Toronto
+0,15,9,Commercial,1466.08,North York
+1,22,6,Commercial,2058.46,Scarborough
+1,11,12,Educational,655.3,Downtown
+1,23,8,Outside,1100.6,Scarborough
+0,17,5,Educational,3296.47,North York
+0,2,11,Commercial,1451.1,Toronto
+1,6,7,Commercial,4043.73,North York
+0,17,5,Educational,4965.62,Midtown
+0,11,2,Transit,3468.73,Toronto
+0,0,12,Apartment,1990.14,Midtown
+0,13,3,Commercial,3764.78,Scarborough
+0,8,5,Commercial,1077.27,North York
+1,0,4,Commercial,3002.54,Downtown
+0,14,9,Apartment,4159.37,North York
+1,4,5,Educational,1275.68,Toronto
+0,13,11,Educational,318.93,Scarborough
+0,4,7,Commercial,4669.72,Downtown
+0,22,5,Apartment,1141.82,North York
+1,14,6,Transit,3616.9,Midtown
+1,3,7,Other,1667.54,Midtown
+0,13,7,House,932.9,Downtown
+1,0,9,Commercial,4937.49,Scarborough
+0,12,9,Educational,2097.72,Toronto
+1,21,10,House,4575.43,Midtown
+0,22,9,Educational,1113.18,Downtown
+0,14,2,Outside,2735.39,Downtown
+1,2,8,Transit,824.55,Scarborough
+0,15,6,House,3789.87,North York
+0,5,6,Apartment,4912.36,Midtown
+0,21,3,House,1432.19,North York
+1,3,4,Apartment,3348.27,Scarborough
+0,6,5,Transit,2475.47,Toronto
+1,22,8,House,2766.5,Scarborough
+1,22,9,Educational,3416.1,North York
+0,23,6,Commercial,1037.67,Scarborough
+1,15,6,Educational,1923.59,Scarborough
+1,8,3,Apartment,4760.11,North York
+0,6,10,Outside,1020.88,Downtown
+0,1,6,Other,1048.35,Scarborough
+0,6,6,Transit,1258.71,Downtown
+1,14,7,Other,3472.92,North York
+1,20,10,Educational,1778.48,Scarborough
+0,23,8,Educational,4700.77,Toronto
+1,17,12,Outside,2678.83,Midtown
+0,8,6,Outside,4943.81,Midtown
+0,14,12,House,2473.18,Midtown
+0,19,10,Apartment,3045.2,Toronto
+0,4,3,Apartment,1885.74,Toronto
+1,8,4,Apartment,865.8,Scarborough
+1,5,9,Outside,64.44,Toronto
+1,17,10,Educational,2077.82,North York
+0,11,8,Apartment,4990.7,Midtown
+1,19,7,Transit,4304.61,Toronto
+1,16,7,Educational,196.01,Toronto
+1,11,10,Transit,450.36,Toronto
+0,18,7,Transit,1529.17,North York
+1,19,10,House,4335.16,Downtown
+0,0,7,Commercial,2505.1,Downtown
+0,13,5,Outside,3326.17,Toronto
+1,21,4,Educational,3343.42,Scarborough
+0,2,5,Apartment,2436.26,Downtown
+0,14,4,Educational,2815.58,Midtown
+1,14,8,House,1908.88,Toronto
+1,3,10,Outside,936.71,Midtown
+1,16,9,Educational,497.01,Toronto
+0,14,7,Commercial,1043.32,Toronto
+0,3,6,Apartment,1498.56,Midtown
+1,19,10,Outside,3670.48,Toronto
+0,3,9,Transit,2315.88,Downtown
+1,13,7,Transit,113.41,Toronto
+1,14,8,Outside,411.85,Downtown
+0,21,8,House,3261.39,Toronto
+0,10,7,Outside,4364.58,Toronto
+0,20,7,Educational,4013.67,Scarborough
+0,4,4,Other,1098.85,North York
+1,23,9,Educational,3700.38,Midtown
+0,7,9,Commercial,541,Midtown
+1,11,10,Apartment,1800.89,North York
+0,8,3,Apartment,2374.1,North York
+0,21,6,Outside,3094.13,Scarborough
+0,4,9,Outside,829.18,Toronto
+0,16,11,Transit,4575.48,Toronto
+0,11,8,Other,2620.92,Scarborough
+0,1,7,Apartment,1482.47,Scarborough
+0,1,2,Commercial,2300.8,Scarborough
+1,23,11,House,4798.99,North York
+1,12,12,Educational,541.69,North York
+1,4,6,Educational,251.23,North York
+0,5,6,House,3610.97,Scarborough
+0,19,6,Educational,1264,North York
+0,10,7,Commercial,111.64,Downtown
+0,4,6,House,700.04,Downtown
+1,17,7,House,4240.24,Toronto
+0,12,5,Outside,2984.88,Midtown
+0,3,9,Outside,4241.79,Midtown
+0,10,5,Commercial,842.93,Midtown
+0,17,10,Apartment,2808.16,Scarborough
+0,21,10,Apartment,1071.43,Toronto
+0,20,11,Other,3541.8,North York
+0,1,6,Educational,3060.28,North York
+1,10,10,Educational,1097.01,Toronto
+0,17,11,Transit,3223.07,Midtown
+0,19,7,Commercial,4492.85,North York
+0,11,11,House,4284.65,Toronto
+0,1,10,Other,704.41,Downtown
+1,21,10,House,1465.16,North York
+1,17,12,Transit,2559.25,Midtown
+0,14,1,Commercial,613.53,Midtown
+0,7,8,House,4668.43,Scarborough
+1,11,5,Outside,3205.79,Scarborough
+1,8,4,Transit,732.56,Toronto
+0,5,11,House,4924.77,Midtown
+1,2,8,Educational,2350.05,North York
+1,6,7,Educational,552.36,Toronto
+1,17,10,Commercial,3665.92,Downtown
+0,23,7,Apartment,1142.39,North York
+1,13,8,Commercial,3854.84,Scarborough
+1,3,7,Other,1536.83,Scarborough
+0,17,5,Commercial,141.45,Midtown
+0,9,7,Other,1507.42,Toronto
+0,21,11,House,3380.34,Midtown
+1,5,9,Transit,4790.1,North York
+0,11,10,Other,3171.44,Toronto
+1,15,8,Outside,4300.83,Midtown
+1,5,5,Other,902.77,Downtown
+0,11,3,Outside,3285.53,North York
+1,2,12,Other,1062.85,Midtown
+0,6,6,Outside,215.21,Midtown
+0,17,6,Other,1986.01,Midtown
+1,0,9,Educational,1291.82,Midtown
+1,12,10,Commercial,3389.15,Midtown
+0,1,11,Outside,4099.13,North York
+1,7,11,Other,4830.04,Toronto
+0,3,7,Commercial,2760.18,North York
+1,0,7,Apartment,4634.17,North York
+0,11,8,Apartment,4155.03,Downtown
+1,0,12,Outside,3403.41,Downtown
+0,6,8,Apartment,4073.32,Downtown
+0,19,7,Apartment,4020.7,Scarborough
+0,8,5,Commercial,2896.66,Downtown
+1,6,6,Apartment,123.96,Downtown
+0,14,9,Commercial,1778.17,Scarborough
+0,11,7,Educational,3403.69,Downtown
+0,19,6,Other,825.85,Scarborough
+0,9,5,Other,4550.7,Scarborough
+0,0,4,Outside,1758.61,Toronto
+1,23,5,Commercial,2305.85,Midtown
+0,9,9,Outside,4445.84,North York
+0,14,8,Commercial,1220.49,North York
+0,22,11,Other,3184.1,Toronto
+1,12,7,Other,2131.44,Scarborough
+0,6,10,Commercial,496.6,Toronto
+1,23,5,House,2315.1,Scarborough
+0,19,5,Commercial,3952.36,North York
+1,23,7,Commercial,3927.5,Scarborough
+1,4,8,Apartment,4432.19,North York
+1,4,9,Other,1112.88,Toronto
+0,10,8,Commercial,1079.87,Scarborough
+1,20,8,Outside,750.38,Toronto
+1,22,9,Commercial,3415.46,Downtown
+0,2,5,Transit,2659.14,Toronto
+1,21,12,Commercial,3276.42,Toronto
+1,0,1,Commercial,2683.96,Downtown
+0,14,6,Transit,3364.47,North York
+1,4,9,House,812.34,Midtown
+0,6,9,Apartment,2311.9,Scarborough
+0,20,7,Outside,2340.88,Downtown
+0,6,4,Transit,2800.26,Downtown
+1,15,6,House,4304.4,Scarborough
+0,5,4,Outside,480.62,Scarborough
+0,19,7,Educational,2677.99,North York
+0,2,7,Outside,4583.59,North York
+1,17,6,Commercial,259.06,Downtown
+1,17,6,Other,2514.1,Midtown
+1,16,8,Educational,4701.69,Downtown
+1,8,8,Commercial,3196.28,Scarborough
+0,18,9,Educational,4204.31,Toronto
+0,15,7,Commercial,1840.41,Midtown
+0,20,2,Apartment,1211.49,Downtown
+0,10,8,Commercial,2946.19,Downtown
+0,16,10,House,416.12,Toronto
+0,9,2,Outside,391.14,Downtown
+1,14,10,Educational,4223.63,North York
+0,19,11,House,4586.53,Downtown
+1,21,9,Commercial,2320.03,Midtown
+0,10,7,Outside,4953.64,North York
+0,21,10,Outside,394.44,Midtown
+0,21,8,Educational,896.28,North York
+1,5,9,Apartment,3254.15,Downtown
+0,18,6,Other,1604.74,Toronto
+1,2,8,Other,1069.77,Toronto
+0,17,5,Educational,3890.01,Downtown
+0,4,9,Educational,3944.95,Scarborough
+0,19,8,Apartment,3767.14,Downtown
+1,17,5,Educational,4567.13,Toronto
+1,21,6,Commercial,1582.23,Midtown
+1,21,10,Educational,2990.63,Midtown
+1,8,8,Educational,3065.9,Downtown
+1,22,6,Other,3461.63,Midtown
+0,20,8,Transit,2395.32,Midtown
+0,23,6,Transit,4725.47,Scarborough
+0,11,5,Outside,4896.96,Downtown
+0,3,6,Transit,2176.95,Downtown
+1,16,9,Apartment,3273.68,Midtown
+0,22,9,House,3882.53,North York
+1,11,5,Apartment,532,Midtown
+1,7,4,Educational,3043.01,Scarborough
+1,18,6,Commercial,702.07,Downtown
+0,23,4,House,3980.24,Toronto
+0,13,6,Other,3367.24,Toronto
+0,15,2,Other,930.43,North York
+1,21,8,Commercial,4176.56,Downtown
+1,16,7,House,1767.03,Midtown
+0,3,7,Apartment,3264.14,Midtown
+0,23,4,Educational,1527.09,Midtown
+1,7,4,Other,2269.47,Midtown
+1,10,6,Other,3318.27,Downtown
+1,16,2,Outside,128.74,Toronto
+0,13,12,Outside,1065.85,North York
+0,5,8,Educational,4253.21,Midtown
+1,17,3,Apartment,1778.16,North York
+0,23,7,Apartment,3162.08,Scarborough
+0,12,8,House,4807.76,Toronto
+1,5,9,House,2434.76,Toronto
+0,20,5,Educational,4167.58,Downtown
+1,12,6,Commercial,3321.5,Downtown
+0,14,5,Outside,1966.35,Midtown
+1,17,6,Other,810.47,Downtown
+1,14,5,House,2040.05,Downtown
+0,11,8,House,961.78,Downtown
+0,10,3,Other,3629.88,Downtown
+1,19,8,Other,561.21,North York
+0,14,8,Educational,2410.79,North York
+0,23,8,Commercial,4926.55,Downtown
+1,12,9,Transit,4283.17,North York
+1,3,10,Apartment,57.47,Midtown
+0,11,8,Commercial,2245.01,Scarborough
+1,21,11,House,2583.76,Midtown
+0,10,5,Educational,4876.64,North York
+1,21,3,Transit,781.46,Downtown
+0,0,6,House,2644.96,Downtown
+1,9,11,Apartment,2047.58,North York
+0,18,2,Other,1737.07,Scarborough
+1,22,9,House,2755.86,North York
+1,18,8,Other,4356.72,Scarborough
+1,10,9,House,4430.7,Toronto
+1,11,6,Commercial,4766.74,Scarborough
+0,18,10,Other,1515.3,Toronto
+0,20,8,House,1624,Scarborough
+0,5,5,Outside,101.4,Toronto
+1,4,4,Transit,1093.15,Scarborough
+0,7,8,Educational,212.04,Downtown
+1,0,6,Commercial,827.18,North York
+1,8,7,Other,2188.14,Scarborough
+0,8,11,Other,4204.74,Toronto
+1,17,5,Other,2227,Midtown
+0,9,12,Commercial,2370.06,Downtown
+0,9,10,House,3164.9,Midtown
+0,1,8,Other,1048.1,Downtown
+0,2,9,Transit,2338.49,Scarborough
+0,22,6,Apartment,514.17,North York
+0,17,12,Other,3514.54,Scarborough
+1,13,9,Other,3902.81,Toronto
+0,6,9,Transit,3625.04,Toronto
+0,14,10,House,4671.1,Downtown
+0,22,11,Other,4323.06,North York
+1,15,6,House,1688.29,Scarborough
+0,3,2,Transit,4583.85,Midtown
+0,15,7,Outside,1978.01,Toronto
+0,13,2,Outside,1754.57,Midtown
+0,3,10,Transit,539.15,Scarborough
+0,16,7,Other,4536.51,Scarborough
+0,10,7,Transit,2449.64,Downtown
+0,15,7,Educational,580.16,Midtown
+1,1,8,Commercial,80.24,North York
+1,21,8,Outside,4462.13,Scarborough
+0,0,3,Apartment,3649.8,North York
+1,15,5,Outside,4553.64,Midtown
+0,4,6,Commercial,3003.18,North York
+1,23,4,Commercial,109.33,Toronto
+1,16,6,Other,4212.34,North York
+0,0,2,Commercial,4325.73,North York
+0,20,3,House,206,Downtown
+0,17,7,Apartment,2630.99,Downtown
+1,15,6,House,1548.49,Scarborough
+1,5,4,Apartment,2226.66,Downtown
+0,15,3,Other,4887.82,Midtown
+0,9,4,Transit,2701.54,Toronto
+0,23,9,House,2135.45,North York
+1,23,8,Apartment,1926.5,Scarborough
+0,8,11,Other,2775.81,Toronto
+0,22,9,Educational,384.51,North York
+0,23,7,Apartment,2260.88,Midtown
+0,20,5,Outside,2216.15,Midtown
+0,3,6,Outside,2705.35,Toronto
+0,2,10,Other,1720.68,Downtown
+0,5,6,Apartment,1828.63,Toronto
+1,2,10,House,2695.84,Scarborough
+0,18,8,Commercial,3989.27,Toronto
+0,10,11,Outside,4346.21,Downtown
+0,12,4,House,1214.8,Downtown
+0,3,6,Apartment,2264.15,Downtown
+0,9,11,Educational,2926.53,Scarborough
+0,14,7,Commercial,2661.19,North York
+0,21,11,House,2339.57,Scarborough
+0,21,9,Apartment,4608.87,Midtown
+0,9,7,Transit,4283.53,Midtown
+0,0,4,Transit,4641.2,Toronto
+0,21,10,Outside,1597.95,Toronto
+0,22,1,Commercial,549.37,Downtown
+0,12,5,Commercial,4688.69,Downtown
+0,17,4,House,2112.54,Midtown
+0,23,5,House,674.89,Downtown
+1,5,6,House,3427.59,Midtown
+1,12,3,Transit,4325.01,Midtown
+1,1,9,Transit,1650.63,North York
+0,13,8,Apartment,3675.72,Toronto
+0,14,10,Apartment,2228.1,Midtown
+1,9,5,Apartment,440.24,Midtown
+0,9,8,Other,453.72,Toronto
+1,21,8,Outside,3148.07,North York
+1,2,6,House,2021.11,Downtown
+0,22,8,House,3941.76,Midtown
+0,16,8,Other,1061.37,North York
+0,21,8,Educational,2647.57,North York
+1,6,8,Transit,4860.7,North York
+0,19,8,House,1031.45,Scarborough
+1,7,8,Educational,3769.01,Scarborough
+0,19,10,Transit,951.77,Toronto
+1,5,9,Apartment,2789.45,Scarborough
+1,17,6,Apartment,823.08,Toronto
+0,14,11,Transit,1508.46,North York
+0,10,5,Other,710.15,North York
+0,8,5,Commercial,1159.33,Scarborough
+0,0,7,Apartment,4410.93,Midtown
+0,11,7,Apartment,2835.57,North York
+1,23,7,Outside,3225.19,North York
+1,12,2,Transit,197.99,Toronto
+0,12,11,Educational,2691.63,Scarborough
+1,11,7,Educational,3764.79,Midtown
+1,3,9,Commercial,4350.37,Midtown
+1,5,4,Other,3618.42,North York
+0,21,11,Outside,327.41,Downtown
+1,21,8,Commercial,3926.38,Midtown
+1,16,3,Commercial,1809.71,Scarborough
+1,4,4,Other,4162.77,North York
+0,1,6,Commercial,867.69,Scarborough
+1,14,9,Educational,361.73,Midtown
+1,12,6,Other,4693.63,Scarborough
+0,22,11,Commercial,4031.59,Midtown
+1,2,4,Commercial,698.96,Scarborough
+0,18,11,House,123.8,North York
+1,10,9,Educational,1251.72,Midtown
+0,8,6,Outside,1823.53,Midtown
+0,2,8,Other,3971.52,Midtown
+1,12,8,Educational,2331.08,Toronto
+1,13,7,Apartment,360.16,Scarborough
+0,9,2,Other,2025.33,North York
+1,16,6,Outside,2300.51,Midtown
+0,17,4,Outside,2460.1,Midtown
+1,3,11,Educational,3312.12,Downtown
+1,7,8,Apartment,1935.7,Downtown
+0,19,5,Commercial,1758.58,North York
+1,10,8,Outside,518.55,Scarborough
+1,11,7,Commercial,3040.98,Scarborough
+0,8,5,Apartment,3382.46,North York
+0,16,7,Educational,1922.45,Toronto
+1,3,8,Transit,3673.11,North York
+0,21,5,Educational,586.32,Midtown
+0,5,9,Educational,1389.91,Toronto
+1,23,5,Outside,4936.44,North York
+0,16,5,House,3084.7,North York
+0,18,10,Transit,4518,North York
+0,14,7,Commercial,73.97,North York
+0,20,3,Apartment,1328.07,Midtown
+0,3,7,Outside,502.17,Downtown
+1,12,10,Other,3074.17,Downtown
+0,14,9,House,3973.31,North York
+0,1,8,Educational,3569.39,Toronto
+0,6,4,Commercial,1683.14,North York
+0,4,5,House,859.66,Downtown
+1,12,10,Outside,3743.08,Downtown
+1,1,7,Apartment,2692.27,Toronto
+1,15,12,Transit,4029.67,Downtown
+0,16,1,Other,1456.25,Midtown
+1,13,4,Educational,1314.91,Scarborough
+0,0,5,Apartment,2150.98,North York
+0,15,4,Commercial,4625.78,Downtown
+1,10,11,Educational,450.54,Midtown
+1,6,5,Commercial,991.26,Downtown
+1,19,5,Educational,81.82,Midtown
+0,2,7,Transit,4973.57,Downtown
+1,1,4,House,1390.33,Downtown
+0,15,4,Outside,1859.21,Downtown
+0,7,6,Educational,4851.89,Toronto
+0,20,8,Transit,4841.83,North York
+1,3,8,Transit,393.15,Midtown
+1,14,5,Outside,1595.58,Toronto
+1,21,5,Educational,139.66,Midtown
+1,5,5,Outside,3644.01,Midtown
+1,0,5,Outside,741.26,North York
+1,17,6,Commercial,377.12,Scarborough
+1,22,8,House,4840.35,Downtown
+1,20,4,House,4702.88,North York
+0,7,5,Commercial,3047.43,Toronto
+0,4,11,Commercial,4166.66,North York
+1,23,10,Commercial,2056.32,Scarborough
+0,12,10,Outside,1905.06,North York
+1,8,7,House,4709.88,Downtown
+0,18,6,Other,2799.68,Toronto
+0,20,7,Other,2030.08,Toronto
+1,14,3,Apartment,778.43,Downtown
+1,11,10,Transit,2444.75,Toronto
+1,18,4,Apartment,1039.6,North York
+0,6,1,Outside,1307.9,Midtown
+1,16,3,Transit,3590.14,North York
+0,13,8,Commercial,1399.82,Downtown
+1,4,4,Transit,4972.53,Toronto
+1,1,2,Educational,2319.28,Midtown
+1,5,4,Transit,3285.27,Toronto
+0,22,9,Educational,3000.85,Midtown
+0,6,11,Commercial,3035.37,Scarborough
+0,4,12,Commercial,3460.05,North York
+0,11,10,Other,408.79,Midtown
+0,3,11,Outside,4913.7,Downtown
+0,11,12,Other,3112.95,Downtown
+1,17,7,Other,1327.09,North York
+0,11,3,Commercial,1056.42,Scarborough
+0,11,9,Educational,3361.51,Midtown
+0,0,8,House,3015.89,Toronto
+1,20,9,Commercial,4913.85,North York
+0,0,10,Apartment,2140.59,North York
+0,18,6,Outside,3614.78,Toronto
+1,2,10,Commercial,483.2,Toronto
+0,21,7,Apartment,4982.47,North York
+0,0,8,Educational,1556.58,Midtown
+1,1,7,Outside,4972.39,North York
+1,18,7,Outside,1114.19,Downtown
+1,21,6,Commercial,768.76,Toronto
+0,7,11,Apartment,2108.19,Downtown
+1,12,7,Outside,4121.49,Scarborough
+0,3,10,Other,368.35,North York
+0,13,10,Outside,2395.71,Scarborough
+1,15,7,House,4341.91,Midtown
+0,7,9,Transit,4666.27,Midtown
+1,23,8,Transit,3871.31,Midtown
+1,13,6,Apartment,1203.23,Toronto
+0,4,7,House,1650.49,Scarborough
+1,12,6,House,1598.96,North York
+1,6,9,Educational,3022.99,Midtown
+0,7,6,Other,1561.4,Toronto
+0,8,8,House,3601.36,Toronto
+0,10,5,Apartment,1593.68,North York
+0,2,2,Commercial,2909.88,Toronto
+0,13,6,Other,3303.85,Toronto
+1,10,5,Transit,1550.25,Downtown
+1,9,9,Apartment,1027.82,Toronto
+0,0,7,Commercial,1669.57,Scarborough
+1,3,8,Outside,2597.64,Midtown
+0,2,10,Other,4711.58,Midtown
+1,0,6,Transit,165.78,Midtown
+0,14,5,Educational,1291.14,North York
+0,10,10,Outside,1706.48,Toronto
+0,9,8,Other,1199.11,Midtown
+0,2,6,Outside,1738.61,Toronto
+0,21,7,Other,424.26,Toronto
+0,8,11,Other,3954.41,Midtown
+0,19,5,Educational,2560.82,Toronto
+0,2,5,Apartment,3671.22,Toronto
+1,1,6,Commercial,995.4,Toronto
+1,16,2,House,4563.55,Scarborough
+1,15,6,Commercial,317.3,Downtown
+0,22,7,Transit,2347.86,Toronto
+0,1,6,Apartment,2825.6,Toronto
+1,8,11,Transit,4138.08,Downtown
+0,11,8,Commercial,4485.48,Scarborough
+0,12,8,House,380.98,Toronto
+0,12,6,Educational,4784.17,Scarborough
+0,10,10,Commercial,2884.98,North York
+0,20,9,Transit,167.21,North York
+1,21,5,Transit,867.01,Midtown
+0,5,11,Outside,2677.83,Downtown
+0,11,1,Educational,311.34,Downtown
+0,13,6,Transit,1857.29,Scarborough
+0,0,3,Other,3504.13,Scarborough
+0,23,6,Transit,1288.74,Downtown
+0,6,9,Transit,359.71,North York
+0,20,4,House,3849.97,Toronto
+0,20,6,House,4672.85,North York
+1,22,4,Commercial,2748.12,Scarborough
+0,14,5,Apartment,2846.53,Toronto
+0,4,10,Outside,4911.1,Midtown
+1,12,6,House,4508.3,North York
+0,11,6,Apartment,371.05,Scarborough
+1,8,8,Educational,3583.05,North York
+0,16,8,Transit,3185.77,Scarborough
+1,8,7,House,534.05,Scarborough
+0,8,3,House,2193.16,Toronto
+1,21,10,Educational,2615.67,North York
+1,14,8,Other,922.65,Midtown
+0,23,6,Transit,1583.47,Midtown
+1,3,7,Commercial,3156.18,North York
+0,18,7,Commercial,208,Toronto
+0,3,9,Other,706.27,Scarborough
+0,12,8,Educational,1399.76,Scarborough
+0,12,8,Commercial,3751.45,North York
+0,1,5,Educational,4023.38,Toronto
+0,6,6,Apartment,1008.17,Scarborough
+0,13,1,Educational,3621.92,Downtown
+1,12,8,Transit,2956.91,Midtown
+1,23,4,House,2174.6,Downtown
+0,10,9,Apartment,4819.85,Toronto
+0,7,5,Educational,2436.43,Midtown
+0,1,11,Apartment,2640.79,Scarborough
+0,14,8,Commercial,426.32,Midtown
+0,19,7,Other,4998.05,Scarborough
+0,0,7,House,2866.3,Toronto
+0,3,9,Educational,1061.19,Toronto
+0,9,4,Transit,3708.24,Scarborough
+1,5,5,Transit,350.42,North York
+0,21,8,Commercial,4458.14,Toronto
+1,1,9,Educational,947.09,Midtown
+0,21,8,Outside,3747.72,North York
+0,18,9,Apartment,2001.65,Downtown
+1,11,10,Apartment,3981.41,Toronto
+0,15,7,Commercial,2417.12,Toronto
+1,4,4,Outside,4148.51,Toronto
+0,11,8,Commercial,2183.27,Downtown
+0,13,1,House,4019.37,North York
+1,10,6,Other,1240.4,Midtown
+0,21,8,Educational,2300.82,Midtown
+0,15,11,Commercial,1718.98,Midtown
+1,15,9,House,3860.86,Downtown
+0,1,4,Outside,2086.37,North York
+0,8,8,Transit,879.83,Toronto
+0,22,4,Outside,1510.02,North York
+1,20,8,House,2419.25,Downtown
+0,3,10,Educational,2926.68,North York
+1,11,8,Transit,4255.83,Midtown
+0,3,9,Transit,1443.02,Downtown
+0,14,7,Commercial,1220.08,Toronto
+0,13,11,Educational,4006.43,Toronto
+0,19,7,Transit,3278.49,North York
+0,4,9,Commercial,3386.92,North York
+1,23,8,House,3769.73,North York
+0,17,8,Transit,4949.44,Scarborough
+1,11,8,Transit,639.66,North York
+1,21,6,Outside,1450.16,Scarborough
+1,3,6,Transit,4397.44,North York
+1,19,10,Other,2618.3,Downtown
+0,10,8,Outside,1817.18,Midtown
+1,20,9,Educational,3883.88,Scarborough
+1,5,7,Commercial,4731.87,North York
+1,10,9,Commercial,1118.57,Toronto
+0,16,5,Outside,2339.85,Toronto
+0,23,7,House,2446.1,Scarborough
+0,14,7,Commercial,3048.96,North York
+1,12,10,Outside,150.07,Toronto
+0,19,5,Commercial,862.36,Downtown
+1,19,8,Outside,423.89,Toronto
+0,21,10,Other,934.11,Downtown
+1,5,10,Transit,4581.49,Scarborough
+1,20,7,Transit,3763.52,Scarborough
+0,15,7,House,4435.2,Downtown
+1,3,10,Educational,1858.7,Scarborough
+0,14,11,Apartment,608.53,North York
+1,7,10,Commercial,2629.35,Scarborough
+0,6,6,Other,2471.44,Downtown
+1,19,4,Apartment,4881.66,Toronto
+0,20,6,Apartment,4982.74,Scarborough
+0,1,3,Apartment,2923.82,Midtown
+0,16,7,Transit,653.55,North York
+0,23,9,Apartment,1356.29,Midtown
+1,9,6,House,276.68,Downtown
+0,18,4,Commercial,485.16,Toronto
+0,20,8,House,949.91,Toronto
+0,17,9,House,3517.92,Scarborough
+0,4,10,Transit,1212.66,Midtown
+0,9,11,Transit,1806.3,Downtown
+0,5,11,Educational,1875.33,North York
+1,23,6,Educational,3442.43,Scarborough
+0,19,8,Commercial,2706.5,North York
+0,9,9,Educational,316.19,North York
+1,22,5,House,2855.87,Toronto
+0,13,7,Apartment,2715.09,Toronto
+1,4,3,Transit,960.32,Scarborough
+0,9,5,Educational,3891.32,Downtown
+1,1,6,Educational,3265.8,Midtown
+0,19,8,Outside,4774.75,North York
+1,21,7,Educational,1580.38,North York
+0,14,8,Educational,2880.1,Downtown
+0,2,4,House,259.27,North York
+0,6,7,Outside,4854.76,Midtown
+1,6,6,Educational,4009.21,Scarborough
+1,21,3,Outside,253.29,Toronto
+0,11,9,Other,1714.54,Scarborough
+1,20,4,Educational,2876.25,Toronto
+1,4,4,House,823.5,Scarborough
+0,9,1,Apartment,4023.19,North York
+1,2,10,Outside,814.35,Scarborough
+1,18,4,Outside,3682.98,North York
+0,16,7,Educational,179.05,North York
+0,18,5,Transit,4336.53,Midtown
+0,0,10,Apartment,1521.63,Midtown
+1,13,5,Transit,4963.63,Downtown
+0,7,8,Outside,4524.34,Toronto
+1,8,7,House,364.07,Midtown
+0,17,6,Commercial,4543.56,Toronto
+0,16,6,Commercial,4626.93,Toronto
+1,16,9,Other,1145.46,North York
+0,19,6,House,3363.04,Downtown
+0,19,9,House,2717.71,Toronto
+1,15,6,Educational,3827.03,Scarborough
+0,17,9,Transit,958.15,Toronto
+1,16,10,Commercial,1980.2,North York
+1,12,7,Educational,4227.98,Downtown
+0,12,8,Commercial,697.82,North York
+0,16,5,House,3806.13,Scarborough
+0,20,7,Educational,2047.38,North York
+0,11,2,Commercial,1583.21,North York
+0,18,11,Commercial,2532.05,Toronto
+1,1,8,Commercial,3648.37,Downtown
+0,14,9,House,176.89,North York
+0,2,5,Apartment,1274.52,Downtown
+0,2,9,Outside,1089.12,Downtown
+0,13,10,Transit,1093.31,North York
+0,23,10,Other,3121.84,Downtown
+1,10,9,Outside,2312.03,Midtown
+0,15,8,Commercial,207.48,Midtown
+0,13,9,Other,1190.15,Downtown
+1,7,3,Transit,95.81,Scarborough
+0,11,11,House,2700.64,Downtown
+0,23,5,Other,1895.36,Downtown
+0,19,10,Transit,653.57,Scarborough
+1,11,12,Apartment,3897.96,North York
+1,4,10,Other,60.13,Midtown
+0,20,8,Transit,1348.33,Scarborough
+1,4,10,Other,723.86,North York
+1,0,5,Outside,198.01,Downtown
+0,12,7,Commercial,2113.67,Downtown
+1,15,1,Outside,1256.15,Downtown
+0,12,9,House,639.38,North York
+1,19,2,House,3774.63,Downtown
+0,13,10,Commercial,2145.68,Midtown
+0,9,2,Transit,4386.58,Scarborough
+1,2,5,Outside,2437.72,Toronto
+1,4,8,Transit,3203.06,Midtown
+1,20,10,Other,3185.67,Toronto
+1,13,8,Apartment,3685.68,Toronto
+1,1,5,Transit,1923.47,North York
+1,19,5,Transit,4901.6,Scarborough
+0,22,12,Transit,1012.87,Downtown
+0,5,6,House,1263.06,North York
+0,16,5,Commercial,2138.66,Scarborough
+1,19,8,House,1709.17,Downtown
+0,0,10,Other,2735.23,Downtown
+0,20,6,Transit,4943.85,North York
+1,10,6,House,3383.6,Scarborough
+0,1,10,Commercial,4779.65,Downtown
+0,0,9,House,3063.55,Scarborough
+1,21,6,Apartment,2322.44,North York
+0,7,5,Transit,3977.31,North York
+0,20,12,Outside,4173.07,North York
+0,20,5,Commercial,1120.65,Midtown
+0,0,8,House,1660.84,Midtown
+1,8,8,Educational,3011.69,North York
+1,16,11,Outside,827.17,North York
+0,6,8,Educational,2959.51,Downtown
+0,23,7,Other,308.39,Downtown
+1,12,8,Outside,4255.69,Toronto
+0,1,10,Apartment,3102.29,Downtown
+1,16,7,House,2930.88,Downtown
+1,17,8,Outside,3372.21,Toronto
+0,2,5,Apartment,4082.61,Scarborough
+0,17,5,Outside,152.48,Scarborough
+0,2,6,House,1193.4,North York
+0,13,11,House,4213.39,Scarborough
+0,0,5,Apartment,1521.12,North York
+1,17,8,Other,3724.75,Downtown
+0,4,6,House,888.12,Downtown
+1,4,7,Apartment,1706.89,North York
+0,3,9,Commercial,1446.67,Midtown
+0,13,7,Educational,1702.13,Scarborough
+1,6,10,House,4549.5,Downtown
+0,11,5,Commercial,3318.28,North York
+1,12,9,Commercial,1247.95,Toronto
+1,1,11,Other,1433.68,Toronto
+1,5,6,Outside,2605.09,Toronto
+0,6,6,House,4712.6,Toronto
+0,14,10,Educational,1860.54,Downtown
+1,14,5,Outside,3287.98,Midtown
+1,10,9,Other,3105.19,Toronto
+0,16,2,Educational,4476.9,Midtown
+1,14,11,Transit,2482.36,Downtown
+0,23,5,Other,1617.14,Downtown
+1,9,3,Apartment,1024.9,Midtown
+0,13,4,Apartment,4733.37,North York
+1,10,7,House,1403.36,Toronto
+1,0,9,Transit,4687.4,Midtown
+0,14,5,Transit,670.02,Downtown
+0,5,8,Commercial,3835.7,Midtown
+0,4,10,Apartment,1121.12,Downtown
+0,15,9,House,3639.76,Scarborough
+0,2,8,Other,4336.54,North York
+0,5,5,Apartment,442.48,Scarborough
+1,5,4,House,4049.63,Midtown
+0,7,5,Transit,1597.34,North York
+0,9,12,House,1956.82,Downtown
+0,20,5,Commercial,1620.95,Downtown
+1,19,6,Apartment,3043.95,Downtown
+1,22,8,Commercial,4014.31,Scarborough
+0,19,10,Transit,2634.29,Toronto
+0,4,1,Educational,4384.22,North York
+0,12,7,Transit,525.65,Toronto
+0,10,10,Commercial,592.13,Scarborough
+0,19,8,House,4568.79,Scarborough
+0,10,8,Educational,3855.25,North York
+0,13,4,House,140.21,Downtown
+0,10,10,House,4597.58,Scarborough
+1,10,3,Commercial,1568.34,Downtown
+1,20,5,Outside,142.03,Scarborough
+1,18,10,Other,3908.04,Midtown
+0,23,8,Outside,589.97,Downtown
+0,0,9,Educational,2658.6,Scarborough
+0,7,7,Outside,1094.57,Midtown
+1,12,9,Commercial,3829.64,Midtown
+0,11,7,Commercial,1299.89,Toronto
+0,7,7,Transit,2398.43,Toronto
+0,23,9,Apartment,4596.66,North York
+1,8,5,House,1707.64,North York
+0,20,7,Transit,2780.58,Midtown
+0,11,4,Apartment,2726.98,Downtown
+0,11,7,Commercial,3437.17,Toronto
+1,5,6,Commercial,4267.13,Downtown
+0,14,8,Apartment,1272.8,North York
+0,12,5,Outside,1188.17,North York
+0,18,8,Transit,617.77,North York
+1,13,9,Other,4831.9,Midtown
+0,22,5,Commercial,1478.32,North York
+0,10,5,Commercial,1898.77,North York
+0,3,10,Transit,4574.35,Toronto
+0,17,10,Transit,2146.73,North York
+0,0,3,Educational,4038.97,Toronto
+0,6,8,Other,741.93,Scarborough
+0,23,9,Commercial,2791.95,Toronto
+0,23,6,Other,3284.67,North York
+1,4,8,House,3391.79,Midtown
+1,11,5,Transit,4048.75,Midtown
+0,7,8,House,1152.32,Toronto
+1,13,2,House,4095.21,North York
+0,13,3,Commercial,3591.55,Scarborough
+0,2,7,Apartment,2490.56,Midtown
+0,18,1,Commercial,3463.6,North York
+0,22,10,Other,1596.59,Midtown
+1,13,5,House,3633.66,North York
+0,1,6,Transit,4159.66,North York
+1,7,5,Outside,200.53,Scarborough
+1,13,7,Transit,3479.61,North York
+0,12,2,Commercial,4189.9,North York
+1,5,10,Commercial,166.25,Toronto
+0,23,4,Other,4711.77,Toronto
+0,9,4,Outside,2636.46,North York
+1,2,8,Educational,4962.31,Scarborough
+0,20,12,Educational,4619.31,Toronto
+0,11,10,House,3625.08,Midtown
+1,2,9,Transit,359.52,Midtown
+0,18,5,Educational,772.61,Toronto
+0,17,5,Transit,1842.98,North York
+0,13,6,Other,3277.73,Downtown
+0,9,12,Outside,332.04,North York
+0,13,8,Transit,2850.31,Scarborough
+0,16,5,Other,1030.64,North York
+0,18,4,Transit,3374.02,Toronto
+0,6,6,Other,331.51,Scarborough
+0,9,11,Apartment,939.47,Midtown
+0,0,9,Outside,4245.1,Downtown
+0,13,10,Commercial,417.25,Scarborough
+0,22,10,Commercial,4532.41,Midtown
+0,14,7,Commercial,3013.55,Downtown
+0,0,6,Other,192.85,Midtown
+1,18,11,House,3150.62,North York
+1,17,4,Educational,4912.14,Scarborough
+0,11,6,Educational,3687.15,Scarborough
+1,6,11,Other,368.4,Toronto
+0,5,12,Other,1602.84,Midtown
+1,1,9,Educational,4801.32,Scarborough
+1,9,6,Outside,201.64,Downtown
+1,9,5,Outside,1071.06,Downtown
+1,6,11,Outside,3111.79,Toronto
+1,19,7,Outside,4283.72,Toronto
+0,21,7,Educational,1761.84,Midtown
+0,13,9,Transit,315.11,Scarborough
+0,8,9,Apartment,2035.73,Scarborough
+0,17,5,Apartment,2273.27,Toronto
+0,10,6,Educational,3673.55,North York
+0,0,8,Commercial,1482.72,Scarborough
+1,15,6,Apartment,1756.59,Downtown
+0,11,9,Commercial,3077.41,Scarborough
+0,16,7,Transit,4462.5,North York
+0,13,10,Educational,3484.34,Toronto
+1,16,8,Apartment,4424.58,Scarborough
+0,19,7,Apartment,4848.59,Downtown
+0,19,4,Outside,3217.23,Downtown
+0,0,7,Outside,3703.68,North York
+0,4,8,House,3701.04,Downtown
+0,13,7,Commercial,2877.91,North York
+1,7,3,Transit,3251.53,North York
+0,22,6,Apartment,3198.19,Toronto
+1,9,5,Other,395.87,Downtown
+1,16,7,Commercial,242.35,Scarborough
+0,11,6,House,1161.23,Midtown
+0,19,10,Educational,464.39,Scarborough
+0,13,6,Commercial,899.1,Downtown
+0,8,7,Apartment,536.78,Downtown
+1,23,4,Transit,2607.39,Toronto
+0,13,4,House,4933.67,Scarborough
+1,12,10,House,3139.59,Downtown
+0,6,3,Other,4411.02,Midtown
+1,1,6,Transit,2851.43,Midtown
+0,17,7,House,4378.8,Toronto
+0,3,8,Apartment,279.04,Downtown
+0,0,7,House,3192.35,Scarborough
+1,4,5,Apartment,4088.24,Toronto
+0,1,5,Other,2610.43,Scarborough
+0,21,6,Educational,68.29,Midtown
+0,3,9,Outside,4880.97,Downtown
+1,6,1,House,853.78,Midtown
+1,16,7,Outside,2349.77,Downtown
+0,20,9,Other,716.56,Midtown
+0,3,9,House,4052.27,Midtown
+1,12,2,Transit,903.09,Downtown
+1,22,12,Outside,1873.33,North York
+1,13,6,House,2589.68,North York
+0,22,6,Other,2349.92,Midtown
+1,7,7,House,4580.95,Midtown
+1,23,7,Apartment,2440.29,North York
+0,20,8,Educational,1260.36,Scarborough
+1,23,6,Other,1540.78,North York
+1,6,8,Outside,4885.54,Downtown
+0,14,8,Commercial,4698.67,Toronto
+1,0,8,Apartment,283.43,North York
+1,0,10,Educational,828.21,Downtown
+1,19,11,Apartment,4516.62,Scarborough
+0,19,6,House,3930.35,Downtown
+0,22,5,Transit,4960.69,Downtown
+0,4,6,Apartment,2814.65,Downtown
+1,9,7,Educational,4312.62,Scarborough
+0,12,6,Apartment,2983.37,Toronto
+0,0,8,Educational,4569.53,Scarborough
+0,9,6,Transit,2687.92,Downtown
+0,23,8,Other,4615.15,Midtown
+0,14,12,Outside,490.88,Scarborough
+0,7,7,Other,3724.84,Toronto
+1,22,4,Other,4995.48,Downtown
+0,1,8,Outside,3640.09,Downtown
+1,2,10,Educational,3100.21,North York
+1,18,6,Other,4592.98,Downtown
+0,15,7,Transit,1120.06,Toronto
+0,15,11,Other,3275.28,Toronto
+0,13,8,Transit,4776.5,Downtown
+0,0,9,Apartment,4062.18,Midtown
+0,8,7,Transit,4306.88,Midtown
+1,2,6,Educational,1775.07,Toronto
+1,4,6,Other,86.31,North York
+0,11,5,Commercial,2628,Downtown
+0,12,10,Other,2192.97,North York
+1,18,8,Transit,4758.82,Toronto
+0,7,5,Transit,1157.04,Scarborough
+1,16,7,Commercial,2629.88,Toronto
+0,1,10,Transit,2642.73,Toronto
+0,12,3,Apartment,4156.88,Toronto
+1,10,1,Educational,275.36,Midtown
+1,21,5,Commercial,915.95,Scarborough
+0,19,8,Apartment,4367.74,Scarborough
+0,10,8,Outside,1663.87,North York
+1,17,8,Educational,604.44,Midtown
+0,5,8,House,1848.49,North York
+0,8,11,Outside,459.23,Toronto
+0,7,8,Educational,4728.42,Scarborough
+0,20,7,House,3857.57,Midtown
+0,5,5,Apartment,863.66,Scarborough
+1,15,4,Transit,1747.84,North York
+0,8,8,House,440.97,North York
+1,7,6,House,4066.2,Downtown
+1,0,3,Other,4347.81,Downtown
+1,15,8,House,695.11,Midtown
+1,19,8,Commercial,1853.21,Scarborough
+1,8,6,Educational,1817.38,Toronto
+1,10,5,Other,3191.19,North York
+1,8,10,Apartment,3304.06,Midtown
+0,18,8,Transit,3712.74,North York
+1,0,5,Commercial,263.19,Midtown
+0,3,5,Educational,4021.61,North York
+0,20,7,Apartment,2126.19,Toronto
+0,7,10,Other,3003.2,Midtown
+0,9,3,Apartment,2930.04,Toronto
+0,14,4,Commercial,1351.61,Downtown
+0,21,9,Outside,2470.19,Toronto
+0,20,9,House,647.76,Downtown
+0,19,9,Commercial,4329.62,Scarborough
+0,12,5,Transit,1899.59,Downtown
+1,9,3,Outside,2874.94,North York
+0,21,7,Outside,4930.97,North York
+0,22,8,Outside,1611.88,North York
+1,23,8,Educational,2785.34,Scarborough
+0,22,9,House,3822.76,Downtown
+1,21,7,Transit,4776.34,Toronto
+1,16,10,Other,4065.49,Scarborough
+1,8,12,Apartment,2234.84,Midtown
+0,1,2,Outside,1875.8,Downtown
+0,20,10,Transit,555.26,Downtown
+1,7,10,Apartment,3350.28,Toronto
+0,22,11,Other,815.1,North York
+1,10,8,Outside,1481.28,North York
+0,3,11,Transit,957.24,Midtown
+1,0,6,Transit,1821.39,Scarborough
+1,5,5,Outside,3275.18,Midtown
+0,21,8,Other,3984.64,North York
+0,6,10,House,4119.84,Downtown
+0,23,9,Other,2308.73,Midtown
+1,13,2,Outside,4736.71,Scarborough
+0,13,7,Other,4087.48,North York
+1,19,9,Educational,3623.87,North York
+0,3,9,Transit,3393.29,Downtown
+1,20,6,Transit,4143.49,Scarborough
+0,5,4,Outside,3491.51,Toronto
+0,13,2,House,1052.45,Downtown
+1,4,8,Apartment,2405.23,Scarborough
+0,8,7,Apartment,2768.21,Midtown
+0,21,1,House,3261.33,North York
+1,14,5,Commercial,663.92,Scarborough
+0,21,9,Educational,2306.83,North York
+0,6,8,Educational,3739,Scarborough
+1,17,10,Outside,4999.66,Midtown
+0,3,6,Other,1885.28,North York
+0,10,12,House,4350.46,Midtown
+1,10,7,House,998.2,Midtown
+0,14,10,Educational,4601.53,North York
+1,7,10,Outside,4432.96,Midtown
+0,17,9,Apartment,4420.82,Toronto
+0,6,6,Outside,1011.72,Toronto
+0,21,10,Apartment,4077.19,Scarborough
+1,10,2,Other,905.84,Scarborough
+1,16,10,Other,186.47,Midtown
+0,1,11,Apartment,2975.04,Scarborough
+1,21,8,Educational,1081.56,Toronto
+0,1,8,Commercial,3790.91,Toronto
+0,3,5,Transit,2101.32,Toronto
+0,3,7,Other,394.11,Scarborough
+0,4,6,Other,807.33,Midtown
+0,6,10,House,4863.84,Scarborough
+1,2,11,Transit,3498.64,Midtown
+1,16,6,Transit,1980.13,Downtown
+1,23,9,House,964.63,Midtown
+0,22,9,Educational,3577.76,Toronto
+1,12,9,Commercial,2062.21,Toronto
+1,2,5,House,919.41,Scarborough
+0,14,7,Educational,2741.29,Toronto
+0,16,10,Educational,3688.87,Downtown
+0,22,9,House,1937.04,Midtown
+0,8,6,Transit,3253.75,Downtown
+0,15,12,House,3326.98,Scarborough
+0,18,10,Transit,4035.45,Toronto
+0,6,8,Commercial,448.12,Midtown
+1,5,4,Educational,3925.28,Downtown
+0,1,4,Commercial,3517.08,Toronto
+0,17,5,Commercial,2933.33,Downtown
+0,19,6,Commercial,948.46,Toronto
+1,7,1,Commercial,3110.95,Scarborough
+0,4,4,Outside,3171.84,Scarborough
+1,19,10,Other,606.25,Midtown
+0,8,6,Commercial,1550.14,Scarborough
+0,20,9,Apartment,4289.76,Toronto
+1,20,2,Commercial,2358.5,Midtown
+1,17,8,Commercial,1343.75,North York
+0,8,6,Outside,440.71,Midtown
+0,0,9,Other,1811.33,North York
+1,6,7,Outside,446.35,Toronto
+1,8,9,Educational,1490.14,Midtown
+1,18,10,Apartment,3240.86,North York
+0,19,9,Outside,4534.22,Midtown
+0,23,8,Transit,2173.76,Downtown
+1,6,11,Apartment,1339.58,Toronto
+0,3,7,Outside,3654.61,North York
+0,6,7,Transit,1637.43,North York
+0,9,10,House,4961.84,Midtown
+0,13,5,Apartment,362.1,Midtown
+0,5,4,Transit,4909.12,Toronto
+0,18,4,House,3926.42,Downtown
+0,11,8,Apartment,2176.37,North York
+0,23,6,Apartment,284.79,Midtown
+0,10,1,Outside,97.34,Midtown
+1,14,7,Educational,3601.82,Downtown
+0,1,6,House,3041.58,North York
+1,0,10,Other,3480.63,Downtown
+0,19,7,Commercial,4016.06,Midtown
+0,5,3,Outside,4072.46,Toronto
+0,8,8,Commercial,1377.93,Toronto
+0,20,7,Commercial,4456.8,Downtown
+0,6,5,Commercial,311,Downtown
+0,13,2,House,2641.68,Downtown
+1,17,8,Transit,1056.38,Downtown
+0,19,9,Other,3278.87,Midtown
+1,4,7,Other,4865.21,Downtown
+1,1,8,Commercial,2500.82,Toronto
+0,4,4,House,1733.42,North York
+1,5,6,House,4197.61,Toronto
+0,9,10,Outside,2957.6,North York
+1,12,8,Apartment,3324.99,Downtown
+1,14,3,Commercial,4951.07,Toronto
+1,10,12,Transit,1500.06,Midtown
+0,16,9,Other,3062.06,Downtown
+1,5,7,Outside,721.8,Midtown
+0,12,10,Educational,3609.06,North York
+1,20,8,Other,1702.2,Downtown
+0,13,4,Transit,3060.98,Downtown
+0,11,7,Transit,4930.39,Toronto
+0,12,3,Apartment,2164.47,Downtown
+0,5,3,Outside,3017.48,Midtown
+0,22,3,Transit,4912.72,North York
+0,13,9,Educational,2683,Toronto
+0,5,9,Educational,650.18,North York
+1,15,7,Other,1425.42,North York
+1,9,3,Commercial,4447.28,Scarborough
+1,18,8,Transit,2305.82,Midtown
+0,9,9,Educational,3465.61,Scarborough
+0,12,11,Other,908.51,Scarborough
+0,3,10,Apartment,749.29,Scarborough
+0,4,6,Transit,418.04,Toronto
+1,4,4,House,3680.7,Downtown
+0,22,6,House,1619.86,North York
+1,14,5,Transit,1485.78,North York
+1,23,1,House,1913.38,Midtown
+0,7,11,Outside,4592.27,Downtown
+1,12,7,Apartment,2292.59,Scarborough
+0,0,7,House,4664.12,Toronto
+0,22,6,Commercial,2797.25,Midtown
+0,4,8,Educational,4141.5,Midtown
+0,5,7,Other,3880.49,Scarborough
+0,19,10,Outside,1844.77,North York
+0,5,5,Educational,1148.84,Toronto
+0,11,10,Educational,455.04,North York
+0,0,7,Other,2318.13,Scarborough
+1,2,5,Educational,2295.7,North York
+1,1,11,House,4258.43,Downtown
+0,15,7,Transit,3876.45,Downtown
+0,11,3,Outside,2882.95,Toronto
+1,11,9,Commercial,127.69,Toronto
+0,17,10,Commercial,2031.85,Scarborough
+1,14,8,Outside,409.21,Downtown
+0,23,1,Transit,2051.2,North York
+0,0,5,Commercial,1164.45,Midtown
+0,20,12,Commercial,296.07,Downtown
+1,0,8,Commercial,3555.15,North York
+0,13,9,Educational,4248.43,Downtown
+1,11,6,Other,2076.75,Toronto
+0,20,8,House,3234.63,Scarborough
+1,23,6,Commercial,1446.37,Scarborough
+0,12,9,Other,1949.85,Downtown
+0,19,5,Educational,4284.42,Scarborough

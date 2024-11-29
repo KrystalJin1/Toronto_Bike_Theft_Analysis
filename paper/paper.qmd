@@ -1,0 +1,363 @@
+---
+title: "My title"
+subtitle: "My subtitle if needed"
+author: 
+  - Jin Zhang
+thanks: "Code and data are available at: https://github.com/KrystalJin1/Toronto_Bike_Theft_Analysis.git "
+date: today
+date-format: long
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+format: pdf
+number-sections: true
+toc: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(palmerpenguins)
+library(rstanarm)
+library(knitr)
+library(kableExtra)
+library(modelsummary)
+library(scales)
+```
+
+
+# Introduction
+
+Overview paragraph
+
+Estimand paragraph
+
+Results paragraph
+
+Why it matters paragraph
+
+Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
+
+
+
+
+
+
+# Data {#sec-data}
+Data analysis is performed by using statistical programming language R [@citeR].................
+
+## Data Source
+
+The dataset used for this analysis originates from the Toronto Police Service's public data @torontodataset(记得要cite). It aims to promote transparency and allow the public to analyze and understand various types of crime in Toronto. The dataset provides comprehensive records of bike theft incidents reported across different regions of the city. It serves as a valuable resource for analyzing trends and developing preventive strategies to combat bike theft. In addition to the Toronto Police Service's bicycle theft dataset, other Canadian cities and countries provide similar data. For example, the Ottawa Police Service offers a dataset detailing bicycle theft occurrences from 2015 to 2020. But this dataset is limited to Ottawa and may not reflect the unique patterns and trends present in Toronto, which means there were no similar datasets that could have been used in this research.
+
+## Data Overview and Cleaning Outcomes
+
+The raw dataset provides 35 varibles with 37178 obeservations related to the incidents of bike theft, capturing various aspects of each theft that are crucial for understanding patterns and determining effective measures. The variables that I chose from the whole dataset is `STATUS`, `OCC_MONTH`, `OCC_HOUR`, `NEIGHBOURHOOD_158`, `PREMISES_TYPE`, `BIKE_COST`. However, using these variables directly makes analyzing more difficult. For example, the original data of `OCC_MONTH` was recorded as month names (in its character form, like "January"), which would complicate temporal analysis. Also, the `NEIGHBOURHOOD_158` included a large amount of neighborhoods' name, making it difficult to derive meaningful and useful insights from the neighborhood data.
+
+After simply understand the raw data, the next step was data cleaning and to transform it into a more suitable format for analysis. The first action involved renaming key variables for better clarity and consistency, ensuring that each variable was descriptive and aligned with the analysis goals.
+The renaming and explanation of each varible included in the following:
+
+- `Occurrence_Hour`(`OCC_HOUR`): The hour of the day (0-23) when the theft occurred.
+- `Premises_Type`(`PREMISES_TYPE`): The type of location where the theft took place (e.g., residential, commercial).
+- `Bike Cost`(`BIKE_COST`): The reported monetary value of the stolen bicycle.
+
+Further specially state:
+
+`OCC_MONTH` variable was originally recorded as month names (e.g., January, February). It was converted into numeric format `Occurrence_Month`, with each month represented by an integer from 1 to 12 (e.g., January = 1, February = 2).
+`STATUS` was converted to a binary variable named `Theft_Status` to simplify analysis by distinguishing whether a theft occurred (1) or not (0) and for further model analysis
+`NEIGHBOURHOOD_158` was converted to `Region`. According to the `neighbourhood_mapping`, the neighborhood data was grouped into broader regions (e.g., Downtown, Midtown, Scarborough) to simplify the analysis. Each neighborhood was mapped to a major region based on its geographic location.
+
+The remaining modified variables are explained in the following:
+
+- `Occurrence_Month`(`OCC_MONTH`): The month in which the bicycle theft occurred.
+- `Theft Status`(`STATUS`): Indicates whether the reported bicycle theft occurred or other(e.g., unfound, recovery). (1 = stolen, 0 = Other).
+- `Region`(`NEIGHBOURHOOD_158`): The broader geographical area where the theft occurred, grouped from specific neighborhood names (e.g., Downtown, Midtown, Scarborough).
+
+```{r}
+#| label: tbl-cleaned-data
+#| tbl-cap: "Preview of Cleaned Bike Theft Data "
+#| echo: false
+#| warning: false
+#| message: false
+
+# Load the analysis data
+clean_data <- read.csv(here::here("data/02-analysis_data/analysis_data.csv"))
+
+# Select the first 10 rows
+preview_table <- head(clean_data, 10)
+
+# Display the preview table with centered data in the paper
+knitr::kable(preview_table, align = "c") |>
+  kable_styling(position = "center")
+```
+
+```{r}
+#| label: tbl-data-summary
+#| tbl-cap: "Summary Statistics of Cleaned Bike Theft Data"
+#| echo: false
+#| warning: false
+#| message: false
+#| 
+# Calculate summary statistics for numeric and categorical columns
+summary_stats <- datasummary_skim( 
+  histogram = FALSE,
+  clean_data, 
+  output = "data.frame"  # Ensure the output is in data frame format
+)
+
+# Display the summary statistics table using kable
+knitr::kable(summary_stats, align = "c") %>%
+  kable_styling(position = "center", full_width = FALSE)
+
+```
+The summary statistics in @tbl-data-summary show key insights about the cleaned bike theft data. The variable "Theft_Status" has only two unique values, with a mean of 1.0, indicating that the majority of bikes were stolen, as the variable is binary (0 or 1). "Occurrence_Hour" has a mean value of 13.4, suggesting that bike thefts tend to happen during afternoon hours, and it has values ranging from 0 to 23, representing all hours of the day. The "Occurrence_Month" variable has 12 unique values, covering the entire year, with an average value of 7, indicating more thefts occurring around mid-year. The average bike cost is around 679.9, with a wide variation from 0 to 2034, showing the diverse range of bikes affected.
+
+
+## Measurement
+	
+The measurement process for obtaining bicycle theft data involves transforming real-world events into a structured dataset, such as the Toronto Police Service's bicycle theft records. This dataset is a product of the process by which bicycle thefts are reported to the police, and is primarily obtained through online reporting tools or direct communication with law enforcement.
+
+
+The reporting process for bicycle thefts under 5,000 dollars requires the victim to provide as much detailed information as possible, including the serial number, customizations (e.g., unique colors or features), and the estimated value of the bicycle. This information is critical to ensure accuracy and traceability of individual cases in the dataset. Bicycles reported must have a value of less than 5,000 dollars or they will be reported through a different channel that differentiates between minor and major thefts.
+
+
+Once a report is submitted, it is reviewed by the appropriate authorities and, if verified, the incident becomes an entry in the dataset used for analysis. Each entry in the dataset corresponds to a real-world burglary event and includes attributes such as when the burglary occurred, the type of premises (e.g., residential, commercial), and the neighborhood or district. These attributes help to understand the context of each burglary and allow for further analysis to identify burglary patterns or high-risk areas.
+
+## Data visualization
+
+```{r}
+#| label: fig-status-count
+#| fig-cap: "Count of Different Premises Types"
+#| echo: false
+#| warning: false
+#| message: false
+#| 
+# Create a bar chart for Theft_Status
+ggplot(clean_data, aes(x = factor(Theft_Status))) +
+  geom_bar(fill = "lightblue", color = "black") +
+  labs(
+    x = "Theft Status (0 = Not Stolen, 1 = Stolen)",
+    y = "Count",
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text = element_text(size = 10)
+  )
+
+```
+
+```{r}
+#| label: fig-month-type-status
+#| fig-cap: "Seasonal Patterns of Bicycle Theft Across Different Premises Types"
+#| echo: false
+#| warning: false
+#| message: false
+
+# Create a bar chart for the cleaned data
+clean_data %>% 
+  filter(!is.na(Occurrence_Month)) %>%
+  ggplot(aes(x = Occurrence_Month, fill = factor(Theft_Status))) + 
+    geom_bar(stat = "count") +
+    scale_fill_brewer(palette = "Set1", labels = c("Other", "Stolen")) + 
+    labs(
+      x = "Month", 
+      y = "Number of Incidents", 
+      fill = "Theft_Status"
+    ) +
+    facet_grid(~ Premises_Type) +
+    theme_bw() +
+    theme(
+      legend.position = "bottom",
+      legend.text = element_text(size = 7), 
+      legend.title = element_text(size = 9), 
+      legend.key.size = unit(1.2, "lines"),
+      panel.grid.major = element_line(color = "gray80"),
+      panel.grid.minor = element_blank(), 
+      legend.background = element_rect(fill = "white", colour = "black"),
+      axis.text.x = element_text(size = 5.5)
+    )
+```
+@fig-month-type-status provides a month-by-month breakdown of bicycle theft incidents in different types of premises and is colored according to the status of each incident. The bar chart clearly shows that thefts tend to peak in the warmer months, a trend that can be attributed to increased bicycle usage. A closer look at the chart reveals that a large percentage of cases remain unsolved (Status = Stolen), while only a small portion of cases are in unknown or recovered status (Status = Oher). In addition, locations such as “outdoor” areas and “apartments” have a particularly high number of bicycle thefts, suggesting that these locations are more likely to have bicycle thefts compared to other locations.
+
+```{r}
+#| label: fig-hour-region
+#| fig-cap: "Hourly Bicycle Theft Incidents by Region"
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(clean_data, aes(x = Occurrence_Hour, y = Region, fill = ..count..)) +
+  geom_tile(stat = "bin2d") +
+  scale_fill_gradient(low = "white", high = "red") +
+  labs(
+    x = "Hour of the Day",
+    y = "Region",
+    fill = "Count"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+```
+This heat map @fig-hour-region visualizes the frequency of bicycle thefts by the hour of the day across different regions of the city. The intensity of the red color represents a higher number of incidents. Downtown and Midtown are shown to have more frequent thefts, particularly during the late morning to early afternoon hours. This pattern suggests that these central areas experience more bicycle thefts during times when there is likely more activity.
+
+```{r}
+#| label: fig-bike-cost
+#| fig-cap: "Distribution of Stolen Bicycle Costs"
+#| echo: false
+#| warning: false
+#| message: false
+#| 
+ggplot(clean_data, aes(x = Bike_Cost)) +
+  geom_histogram(bins = 30, fill = "lightblue", color = "black") +
+  labs(
+    x = "Bike Cost",
+    y = "Frequency"
+  ) +
+  theme_minimal()
+
+```
+@fig-bike-cost shows the distribution of bike costs for bicycles reported as stolen. We can see that the majority of stolen bikes fall in the lower to mid-range price categories, with a concentration around $200 to $800. There are also a few bikes with higher values, indicating that expensive bikes, though stolen less frequently, are still targets. This distribution suggests that thieves generally target moderately priced bikes, likely because they are more common and potentially easier to steal.
+
+
+Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+
+
+## Predictor variables
+
+Add graphs, tables and text.
+
+Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+
+
+
+# Model
+
+The goal of our modelling strategy is twofold. Firstly,...
+
+Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+
+## Model set-up
+
+Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+
+\begin{align} 
+y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
+\mu_i &= \alpha + \beta_i + \gamma_i\\
+\alpha &\sim \mbox{Normal}(0, 2.5) \\
+\beta &\sim \mbox{Normal}(0, 2.5) \\
+\gamma &\sim \mbox{Normal}(0, 2.5) \\
+\sigma &\sim \mbox{Exponential}(1)
+\end{align}
+
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+
+
+### Model justification
+
+We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+
+We can use maths by including latex between dollar signs, for instance $\theta$.
+
+
+# Results
+
+Our results are summarized in @tbl-modelresults.
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+
+
+Bike_Theft_model <-
+  readRDS(file = here::here("models/Bike_Theft_model.rds"))
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-modelresults
+#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| warning: false
+
+modelsummary::modelsummary(
+  list(
+    "Bike_Theft_model" = Bike_Theft_model
+  ),
+  statistic = "mad",
+  fmt = 2
+)
+```
+
+
+
+
+# Discussion
+
+## First discussion point {#sec-first-point}
+
+If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+
+## Second discussion point
+
+Please don't use these as sub-heading labels - change them to be what your point actually is.
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+Weaknesses and next steps should also be included.
+
+\newpage
+
+\appendix
+
+# Appendix {-}
+
+
+# Additional data details
+
+# Model details {#sec-model-details}
+
+## Posterior predictive check
+
+In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+
+In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+
+
+
+## Diagnostics
+
+@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+
+@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+#| label: fig-stanareyouokay
+#| fig-cap: "Checking the convergence of the MCMC algorithm"
+#| fig-subcap: ["Trace plot", "Rhat plot"]
+#| layout-ncol: 2
+
+plot(Bike_Theft_model, "trace")
+
+plot(Bike_Theft_model, "rhat")
+```
+
+
+
+\newpage
+
+
+# References
+
+
