@@ -15,7 +15,7 @@ library(tidyverse)
 library(testthat)
 
 # Read simulated data
-simulated_data <- read_csv("data/00-simulated_data/simulated_data.csv", show_col_types = FALSE)
+simulated_data <- read_parquet("data/00-simulated_data/simulated_data.parquet")
 
 ## Test about simulated data
 
@@ -30,17 +30,18 @@ test_that("Occurrence_Hour is within valid range (0-23)", {
               "Occurrence_Hour contains values outside the range 0-23.")
 })
 
+test_that("Occurrence_Month is within valid range (1-12)", {
+  expect_true(all(simulated_data$Occurrence_Month >= 1 & simulated_data$Occurrence_Month <= 12),
+              "Occurrence_Month contains values outside the range 1-12.")
+})
+
 test_that("Bike_Cost is non-negative", {
   expect_true(all(simulated_data$Bike_Cost >= 0),
               "Bike_Cost contains negative values.")
 })
 
-test_that("Region contains all expected regions", {
-  expected_regions <- c('North York', 'Toronto', 'Downtown', 'Scarborough', 'Midtown')
-  unique_regions <- unique(simulated_data$Region)
-  missing_regions <- setdiff(expected_regions, unique_regions)
-  expect_true(length(missing_regions) == 0,
-              paste("Missing regions:", paste(missing_regions, collapse = ", ")))
+test_that("Premises_Type categories are correct", {
+  expect_setequal(unique(simulated_data$Premises_Type), c("Outdoors", "Residential", "Other"))
 })
 
 test_that("Premises_Type is not empty", {
@@ -48,5 +49,7 @@ test_that("Premises_Type is not empty", {
 })
 
 test_that("Number of rows is correct", {
-  expect_true(nrow(simulated_data) == 2000, "The number of rows in simulated_data is not 2000.")
+  expect_true(nrow(simulated_data) == 10000, "The number of rows in simulated_data is not 10000.")
 })
+
+

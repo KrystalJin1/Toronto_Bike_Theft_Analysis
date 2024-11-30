@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Cleans the raw Bike Theft data to what we need to analyze.
 # Author: Jin Zhang
-# Date: 26 Novemeber 2024
+# Date: today
 # Contact: kry.zhang@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: No.
@@ -17,8 +17,7 @@ raw_data <- read_csv("data/01-raw_data/raw_data.csv", show_col_types = FALSE)
 
 # Step 2: Select variables for analysis
 clean_data <- raw_data |>
-  select(STATUS, OCC_HOUR, OCC_MONTH, PREMISES_TYPE, BIKE_COST, NEIGHBOURHOOD_158)
-
+  select(STATUS, OCC_HOUR, OCC_MONTH, PREMISES_TYPE, BIKE_COST)
 
 # Step 3: Rename columns for better readability
 clean_data <- clean_data |>
@@ -27,15 +26,12 @@ clean_data <- clean_data |>
     Occurrence_Hour = OCC_HOUR,
     Occurrence_Month = OCC_MONTH,
     Premises_Type = PREMISES_TYPE,
-    Bike_Cost = BIKE_COST,
-    Neighbourhood = NEIGHBOURHOOD_158
+    Bike_Cost = BIKE_COST
   )
 
 # Step 4: Convert Theft_Status to binary variable
 clean_data <- clean_data |>
-  mutate(Theft_Status = ifelse(Theft_Status == "STOLEN", 1, 0),)
-
-print(clean_data)
+  mutate(Theft_Status = ifelse(Theft_Status == "STOLEN", 1, 0))
 
 # Step 5: Convert Occurrence_Month from string to integer
 month_mapping <- c(
@@ -45,35 +41,10 @@ month_mapping <- c(
 clean_data <- clean_data |>
   mutate(Occurrence_Month = as.integer(month_mapping[Occurrence_Month]))
 
-# Step 5: Convert Neighbourhood to Region and replace Neighbourhood column
-neighbourhood_mapping <- list(
-  'North York' = c('Willowdale', 'York Mills', 'Bayview Village', 'Don Valley Village', 'Lansing-Westgate', 'Downsview', 'Pleasant View', 'Parkwoods-O\'Connor Hills', 'Newtonbrook', 'Bathurst Manor', 'Victoria Village'),
-  'Toronto' = c('Rosedale', 'High Park North', 'Corso Italia-Davenport', 'Playter Estates-Danforth', 'Wychwood', 'Leaside-Bennington', 'Mount Dennis'),
-  'Downtown' = c('Financial District', 'Entertainment District', 'Kensington-Chinatown', 'Church-Yonge Corridor', 'Moss Park', 'Regent Park', 'St Lawrence', 'Cabbagetown-South St.James Town', 'University', 'Bay Cloverhill'),
-  'Scarborough' = c('Guildwood', 'Woburn', 'West Hill', 'Birchcliffe-Cliffside', 'Malvern', 'Bendale', 'Agincourt', 'Morningside', 'Highland Creek', 'Clairlea-Birchmount', 'Kennedy Park'),
-  'Midtown' = c('Forest Hill', 'Yonge-Eglinton', 'Mount Pleasant West', 'Mount Pleasant East', 'Davisville Village', 'Chaplin Estates', 'Lawrence Park North', 'Deer Park', 'Moore Park')
-)
+# Step 6: Remove rows where Bike_Cost is NA
+clean_data <- clean_data |> drop_na(Bike_Cost)
 
-# Flatten the mapping into a dataframe for easier joining
-neighbourhood_df <- stack(neighbourhood_mapping) |>
-  rename(Neighbourhood = values, Region = ind)
-
-# Clean up Neighbourhood column to remove numbers or extra text that may not match exactly
-clean_data <- clean_data |>
-  mutate(Neighbourhood = gsub("\\s*\\(\\d+\\)", "", Neighbourhood))
-
-# Merge the neighbourhood mapping with the clean_data
-clean_data <- clean_data |>
-  left_join(neighbourhood_df, by = "Neighbourhood") |>
-  mutate(Region = as.character(Region), Region = ifelse(is.na(Region), 'Other', Region)) |>
-  select(-Neighbourhood)  # Replace Neighbourhood with Region
-
-# Step 6: Remove rows with missing data and Region == 'Other'
-clean_data <- clean_data |>
-  filter(Region != 'Other') |>
-  na.omit()
-
-# Step 8: Remove outliers from Bike_Cost
+# Step 7: Remove outliers from Bike_Cost
 q1 <- quantile(clean_data$Bike_Cost, 0.25)
 q3 <- quantile(clean_data$Bike_Cost, 0.75)
 iqr <- q3 - q1
@@ -86,6 +57,25 @@ upper_bound <- q3 + 1.5 * iqr
 clean_data <- clean_data |>
   filter(Bike_Cost >= lower_bound & Bike_Cost <= upper_bound)
 
+# Step 8: Group Premises_Type into categories
+clean_data <- clean_data |>
+  mutate(
+    Premises_Type = case_when(
+      Premises_Type %in% c("Apartment", "House") ~ "Residential",
+      Premises_Type %in% c("Educational", "Commercial", "Transit") ~ "Outdoors",
+      Premises_Type == "Other" ~ "Other",
+      TRUE ~ NA_character_  # Handle unexpected categories
+    )
+  ) |>
+  drop_na(Premises_Type) # Drop rows where Premises_Type becomes NA
+
+
+write_csv(clean_data, "data/02-analysis_data/analysis_data.csv")
+
 #### Save data ####
 write_parquet(x = clean_data,
               sink = "data/02-analysis_data/analysis_data.parquet")
+
+
+
+
