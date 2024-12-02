@@ -13,13 +13,14 @@ library(tidyverse)
 library(rstanarm)
 
 #### Read data ####
-analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv", show_col_types = FALSE)
+analysis_data <- read_parquet(file = here::here("data/02-analysis_data/analysis_data.parquet"))
+
 
 #### Model data ####
-# Fit a Bayesian logistic regression model to predict Theft_Status
+# Fit a Bayesian logistic regression model to predict Theft Status
 Bike_Theft_model <- 
   stan_glm(
-    formula = Theft_Status ~ Occurrence_Hour + Occurrence_Month + Premises_Type + Bike_Cost + Region,
+    formula = Theft_Status ~ Occurrence_Hour + Occurrence_Month + Premises_Type + Bike_Cost,
     data = analysis_data,
     family = binomial(link = "logit"),  # Logistic regression for binary outcome
     prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
@@ -27,10 +28,9 @@ Bike_Theft_model <-
     seed = 1008184288
   )
 
+
 #### Save model ####
 saveRDS(
   Bike_Theft_model,
   file = "models/Bike_Theft_model.rds"
 )
-
-

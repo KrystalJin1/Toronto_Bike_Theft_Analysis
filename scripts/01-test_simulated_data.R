@@ -15,7 +15,7 @@ library(tidyverse)
 library(testthat)
 
 # Read simulated data
-simulated_data <- read_parquet("data/00-simulated_data/simulated_data.parquet")
+simulated_data <- read_csv("data/00-simulated_data/simulated_data.csv", show_col_types = FALSE)
 
 ## Test about simulated data
 
@@ -41,7 +41,7 @@ test_that("Bike_Cost is non-negative", {
 })
 
 test_that("Premises_Type categories are correct", {
-  expect_setequal(unique(simulated_data$Premises_Type), c("Outdoors", "Residential", "Other"))
+  expect_setequal(unique(simulated_data$Premises_Type), c("Outdoors", "Apartment","House", "Other"))
 })
 
 test_that("Premises_Type is not empty", {

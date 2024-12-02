@@ -12,7 +12,7 @@
 library(tidyverse)
 set.seed(1008184288)
 
-# Simulate 1000 rows of data
+# Simulate 10000 rows of data
 
 n <- 10000
 
@@ -22,11 +22,11 @@ simulated_data <- data.frame(
   Occurrence_Month = sample(1:12, n, replace = TRUE),  # Months from January (1) to December (12)
   Occurrence_Hour = sample(0:23, n, replace = TRUE),  # Hours from 0 to 23
   Bike_Cost = sample(50:2000, n, replace = TRUE),  # Cost range from 50 to 2000
-  Premises_Type = sample(c("Outdoors", "Residential", "Other"), n, replace = TRUE)  # Premises types
+  Premises_Type = sample(c("Outdoors", "House", "Apartment", "Other"), n, replace = TRUE)  # Premises types
 )
 
+
 #### Save data ####
-write_parquet(x = simulated_data,
-              sink = "data/00-simulated_data/simulated_data.parquet")
+write_csv(simulated_data, "data/00-simulated_data/simulated_data.csv")
 
 
