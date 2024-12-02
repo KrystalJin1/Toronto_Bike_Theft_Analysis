@@ -19,7 +19,6 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
 library(rstanarm)
 library(knitr)
 library(kableExtra)
@@ -27,6 +26,8 @@ library(modelsummary)
 library(scales)
 library(here)
 library(readr)
+library(arrow)
+
 ```
 
 
@@ -73,6 +74,36 @@ The remaining modified variables are explained in the following:
 - `Occurrence_Month`(`OCC_MONTH`): The month in which the bicycle theft occurred.
 - `Theft Status`(`STATUS`): Indicates whether the reported bicycle theft occurred or other(e.g., unfound, recovery). (1 = stolen, 0 = Other).
 - `Region`(`NEIGHBOURHOOD_158`): The broader geographical area where the theft occurred, grouped from specific neighborhood names (e.g., Downtown, Midtown, Scarborough).
+
+```{r}
+#| label: tbl-variable
+#| tbl-cap: "Variables and their Definitions for the Bike Theft Model."
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-pos: H
+
+# Define the table with adjusted column widths and formatting
+variable_table <- data.frame(
+  Variable = c("Theft Status", "Occurrence Hour", "Occurrence Month", "Premises Type", "Bike Cost"),
+  Definition = c(
+    "Binary variable where 1 indicates a bike was stolen and 0 indicates no theft.",
+    "Hour of the day when the bike theft incident occurred, ranging from 0 to 23.",
+    "Month of the year when the bike theft occurred, ranging from 1 (January) to 12 (December).",
+    "Categorizes the location of the bike theft as House, Apartment, Outdoors, or Other.",
+    "The monetary value of the bike, used as a continuous variable."
+  )
+)
+
+
+kable(variable_table, col.names = c("Variable", "Definition"),
+      format = "latex", booktabs = TRUE, linesep = "") %>%
+  column_spec(1, bold = TRUE, width = "15em") %>%
+  column_spec(2, width = "30em")  # Adjust the width to allow for more text in the definition column
+```
+
+
+
 
 ```{r}
 #| label: tbl-cleaned-data
@@ -124,7 +155,6 @@ Once a report is submitted, it is reviewed by the appropriate authorities and, i
 
 ## Data visualization
 
-
 ```{r}
 #| label: fig-month-type-status
 #| fig-cap: "Seasonal Patterns of Bicycle Theft Across Different Premises Types"
@@ -158,7 +188,7 @@ analysis_data %>%
       axis.text.x = element_text(size = 7.5)
     )
 ```
-@fig-month-type-status provides a month-by-month breakdown of bicycle theft incidents in different types of premises and is colored according to the status of each incident. The bar chart clearly shows that thefts tend to peak in the warmer months, a trend that can be attributed to increased bicycle usage. A closer look at the chart reveals that a large percentage of cases remain unsolved (Status = Stolen), while only a small portion of cases are in unknown or recovered status (Status = Other). In addition, locations such as “Outdoors” areas and “Residential” have a particularly high number of bicycle thefts, suggesting that these locations are more likely to have bicycle thefts compared to other locations.
+@fig-month-type-status provides a month-by-month breakdown of bicycle theft incidents in different types of premises and is colored according to the status of each incident. The bar chart clearly shows that thefts tend to peak in the warmer months, a trend that can be attributed to increased bicycle usage. A closer look at the chart reveals that a large percentage of cases remain unsolved (Status = Stolen), while only a small portion of cases are in unknown or recovered status (Status = Other). In addition, locations such as “Outdoors” areas and “Other” have a particularly high number of bicycle thefts, suggesting that these locations are more likely to have bicycle thefts compared to other locations.
 
 ```{r}
 #| label: fig-hour
@@ -232,19 +262,22 @@ The goal of the model is to determine how different factors impact the probabili
 \end{align}
 
 
-The Bayesian logistic regression model predicts the likelihood of a bike theft ($y_i$) using several predictors, with ($y_i = 1$) indicating a theft occurred and ($y_i = 0$) otherwise. The predictors include $X_{\text{Occurrence Hour},i}$, representing the hour of the day (0–23) to capture temporal patterns in theft likelihood, and $X_{\text{Occurrence Month},i}$, is the month of the theft (1–12) to account for seasonal variations. $X_{\text{Premises Type},i}$ categorizes theft locations as "Residential" (e.g., apartments and houses), "Outdoors" (e.g., educational, commercial, and transit areas) and "Other", examining how location type influences theft probability. And the baseline category for the variable $X_{\text{Premises Type},i}$ is `Other`. $X_{\text{Bike Cost},i}$ is a continuous variable representing the reported value of the bike, with higher costs hypothesized to increase theft likelihood due to perceived value.
 
-Specifically, $\beta_1$ is linked to $X_{\text{Occurrence Hour},i}$, demonstrating how changes throughout the day might affect the log-odds of theft, while $\beta_2$ for $X_{\text{Occurrence Month},i}$ captures the monthly fluctuations in theft probability, suggesting that some months may be riskier than others. The coefficients $\beta_3$, associated with the $X_{\text{Premises Type},i}$ categories "Residential" and "Outdoors", indicate the difference in theft log-odds compared to the baseline category "Other"; for example, a positive $\beta_3$ implies a higher log-odds of thefts in residential areas. Lastly, $\beta_4$ for $X_{\text{Bike Cost},i}$ quantifies the impact of the bike's value on theft risk, positing that more expensive bikes are more likely to be stolen.
+Here's the revised description for your Bayesian logistic regression model where "Apartment" is specified as the baseline category for the premises type variable:
 
-The $\beta$ coefficients are important because they provide insights into how variables such as $X_{\text{Occurrence Hour},i}$, $X_{\text{Occurrence Month},i}$, $X_{\text{Premises Type},i}$, $X_{\text{Bike Cost},i}$, and `Premises_Type` influence the likelihood of a reported bike theft. Understanding these relationships helps identify patterns in theft occurrences, such as whether certain times, types of premises, or cost ranges of bikes significantly affect the risk of theft.
+The Bayesian logistic regression model predicts the likelihood of a bike theft ($y_i$), where ($y_i = 1$) indicates a theft and ($y_i = 0$) otherwise. The model includes several predictors: $X_{\text{Occurrence Hour},i}$ captures the hour of the day (0–23) to identify temporal patterns in theft likelihood, and $X_{\text{Occurrence Month},i}$ represents the month (1–12) to account for seasonal variations. $X_{\text{Premises Type},i}$ categorizes the theft locations into "Apartment" (the baseline category), "House", "Outdoors", and "Other", examining how location influences theft probability. Additionally, $X_{\text{Bike Cost},i}$ is a continuous variable representing the bike's reported value, hypothesizing that higher values may increase theft likelihood due to perceived value.
+
+Specifically, $\beta_1$ relates to $X_{\text{Occurrence Hour},i}$, exploring how different hours affect the log-odds of theft, while $\beta_2$ for $X_{\text{Occurrence Month},i}$ examines how theft likelihood fluctuates monthly. The coefficients $\beta_3$ for $X_{\text{Premises Type},i}$ show the variation in theft log-odds for "House", "Outdoors", and "Other" compared to the baseline "Apartment". For example, a positive $\beta_3$ for "House" would imply higher log-odds of theft in house settings compared to apartments. Lastly, $\beta_4$ for $X_{\text{Bike Cost},i}$ quantifies how the bike's cost impacts theft risk, suggesting that more expensive bikes are more likely targets.
+
+These $\beta$ coefficients are crucial for understanding how variables such as $X_{\text{Occurrence Hour},i}$, $X_{\text{Occurrence Month},i}$, and $X_{\text{Premises Type},i}$ influence the likelihood of a reported bike theft. Analyzing these relationships helps pinpoint specific patterns in theft occurrences, revealing whether certain times of day, types of premises, or bike cost ranges significantly alter theft risk.
 
 We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
-
 
 
 ### Model justification
 
 The Bayesian logistic regression model was chosen based on prior knowledge about factors influencing bike theft. For instance, premises type and residential status are expected to have different theft risks based on environmental characteristics, while bike cost reflects the value of the stolen item, which might influence the likelihood of theft. Bayesian regression allows us to incorporate this prior understanding through weakly informative priors, enhancing the model's ability to capture these relationships. Additionally, variables like occurrence hour and premises type may exhibit complex patterns that the Bayesian approach can better account for by combining prior knowledge with observed data. The model provides not only point estimates but also posterior distributions, enabling a clearer understanding of uncertainty in each predictor's impact. But the model assumes a linear relationship between predictors and the log-odds of theft, as well as independence between theft events. However, these assumptions may be limiting. For example, if theft events are highly correlated spatially or temporally—such as clusters of thefts occurring in the same area or during specific times—the model may not accurately capture these patterns.
+
 
 ### Model validation
 
@@ -255,7 +288,6 @@ The Bayesian logistic regression model was chosen based on prior knowledge about
 @fig-rhat displays the diagnostic, which assesses the convergence of Markov Chain Monte Carlo (MCMC) simulations for each parameter in the Bayesian logistic regression model. All $\hat{R}$ values are clustered around 1.00 and well below the critical thresholds of 1.05 or 1.1, indicating strong convergence across all parameters. This suggests that the multiple chains have mixed well and the posterior distributions are reliably estimated. As a result, the model's output can be trusted for further inference and analysis
 
 Here we briefly describe the evidence and the detailed graph and plot for model validation and inspection, which are included in [Appendix -@sec-model-details].
-
 
 # Results
 
@@ -307,7 +339,8 @@ credible_intervals$Variable <- recode(credible_intervals$Variable,
   "Occurrence_Hour" = "Hour of Occurrence",
   "Occurrence_Month" = "Month of Occurrence",
   "Premises_TypeOutdoors" = "Outdoor Premises",
-  "Premises_TypeResidential" = "Residential Premises",
+  "Premises_TypeHouse" = "House Premises",
+  "Premises_TypeOther" = "Other Premises",
   "Bike_Cost" = "Bike Cost per $1000"
 )
 
@@ -377,7 +410,6 @@ ggplot(credible_intervals, aes(x = OR, y = Variable)) +
 
 
 
-
 # Discussion
 
 
@@ -401,7 +433,6 @@ Weaknesses and next steps should also be included.
 \appendix
 
 # Appendix {-}
-
 # Idealized Methodology of Totonto Police Service
 The methodology employed by the Toronto Police Service (TPS) for analyzing bike theft is rooted in rigorous data collection and meticulous validation processes [@TorontoPoliceData]. Initially, data is gathered from police reports submitted by the community and officers in the field. This preliminary data, which is subject to change, captures various aspects of bike theft incidents, including location, time, and details of the theft.
 
@@ -479,8 +510,9 @@ bayesplot::mcmc_areas(
 
 # Premise type
 label_mapping <- c(
-  "Premises_TypeResidential" = "Residential Premises",
-  "Premises_TypeOutdoors" = "Outdoor Premises"
+  "Premises_TypeHouse" = "House Premises",
+  "Premises_TypeOutdoors" = "Outdoor Premises",
+  "Premises_TypeOther" = "Other Premises"
 )
 bayesplot::mcmc_areas(
   exp_posteriors,
@@ -527,7 +559,8 @@ plot(Bike_Theft_model, "trace", "(Intercept)")
 plot(Bike_Theft_model, "trace", "Occurrence_Hour")
 plot(Bike_Theft_model, "trace", "Occurrence_Month")
 plot(Bike_Theft_model, "trace", "Premises_TypeOutdoors")
-plot(Bike_Theft_model, "trace", "Premises_TypeResidential")
+plot(Bike_Theft_model, "trace", "Premises_TypeOther")
+plot(Bike_Theft_model, "trace", "Premises_TypeHouse")
 plot(Bike_Theft_model, "trace", "Bike_Cost")
 
 ```
@@ -543,8 +576,6 @@ plot(Bike_Theft_model, "trace", "Bike_Cost")
 
 plot(Bike_Theft_model, "rhat")
 ```
-
-
 
 
 
@@ -566,20 +597,6 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 
 @fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
 
-```{r}
-#| echo: false
-#| eval: true
-#| message: false
-#| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
-
-plot(Bike_Theft_model, "trace")
-
-plot(Bike_Theft_model, "rhat")
-```
 
 
 
