@@ -5,8 +5,8 @@
 # Contact: kry.zhang@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: 
-  # - The `tidyverse` package must be installed and loaded
-  # - 00-simulate_data.R must have been run
+# - The `tidyverse` package must be installed and loaded
+# - 00-simulate_data.R must have been run
 # Any other information needed? No.
 
 
@@ -49,7 +49,9 @@ test_that("Premises_Type is not empty", {
 })
 
 test_that("Number of rows is correct", {
-  expect_true(nrow(simulated_data) == 10000, "The number of rows in simulated_data is not 10000.")
+  expect_true(nrow(simulated_data) == 1000, "The number of rows in simulated_data is not 1000.")
 })
+
+
 
 

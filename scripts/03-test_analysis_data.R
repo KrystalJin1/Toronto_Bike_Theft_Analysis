@@ -16,7 +16,8 @@ library(testthat)
 
 cleaned_data <- read_parquet("data/02-analysis_data/analysis_data.parquet") |>
   mutate(Theft_Status = as.integer(Theft_Status),
-         Occurrence_Hour = as.integer(Occurrence_Hour))
+         Occurrence_Hour = as.integer(Occurrence_Hour),
+         Premises_Type = as.character(Premises_Type))
 
 
 #### Test data ####

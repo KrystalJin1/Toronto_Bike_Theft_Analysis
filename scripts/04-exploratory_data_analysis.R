@@ -55,3 +55,5 @@ barplot(table(analysis_data$Premises_Type),
         las = 2)
 
 
+
+

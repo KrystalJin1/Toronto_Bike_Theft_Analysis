@@ -12,21 +12,32 @@
 library(tidyverse)
 set.seed(1008184288)
 
-# Simulate 10000 rows of data
+# Simulate 1000 rows of data
+n <- 1000  # Number of observations
 
-n <- 10000
+# Define probabilities of theft based on Premises_Type
+premises_types <- c("Outdoors", "House", "Apartment", "Other")
+theft_probs <- c(0.8, 0.3, 0.4, 0.5)  # Higher probability of theft outdoors
 
-# Simulate data
+# Simulate Premises_Type
 simulated_data <- data.frame(
-  Theft_Status = sample(c(0, 1), n, replace = TRUE, prob = c(0.5, 0.5)),  # Assuming equal probability for simplicity
-  Occurrence_Month = sample(1:12, n, replace = TRUE),  # Months from January (1) to December (12)
-  Occurrence_Hour = sample(0:23, n, replace = TRUE),  # Hours from 0 to 23
-  Bike_Cost = sample(50:2000, n, replace = TRUE),  # Cost range from 50 to 2000
-  Premises_Type = sample(c("Outdoors", "House", "Apartment", "Other"), n, replace = TRUE)  # Premises types
+  Premises_Type = sample(premises_types, n, replace = TRUE, prob = c(0.4, 0.3, 0.2, 0.1))  # Uneven distribution of premises
 )
+
+# Assign Theft_Status based on Premises_Type
+simulated_data$Theft_Status <- sapply(simulated_data$Premises_Type, function(premise) {
+  rbinom(1, size = 1, prob = theft_probs[which(premises_types == premise)])
+})
+
+# Add additional independent variables for context
+simulated_data$Occurrence_Month <- sample(1:12, n, replace = TRUE)  # Random months
+simulated_data$Occurrence_Hour <- sample(0:23, n, replace = TRUE)  # Random hours
+simulated_data$Bike_Cost <- sample(50:2000, n, replace = TRUE)  # Random bike cost
 
 
 #### Save data ####
 write_csv(simulated_data, "data/00-simulated_data/simulated_data.csv")
+
+
 
 
