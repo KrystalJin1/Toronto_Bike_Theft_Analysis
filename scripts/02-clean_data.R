@@ -71,9 +71,6 @@ clean_data <- clean_data %>%
   drop_na(Premises_Type) # Drop rows where Premises Type becomes NA
 
 
-
-write_csv(clean_data, "data/02-analysis_data/analysis_data.csv")
-
 #### Save data ####
 write_parquet(x = clean_data,
               sink = "data/02-analysis_data/analysis_data.parquet")
