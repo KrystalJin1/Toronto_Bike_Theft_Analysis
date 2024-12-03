@@ -22,5 +22,5 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
+No auto-complete tools such as GitHub Copilot were used in the course of this project. Statement on LLM Usage: Aspects of the code and paper were written with the help of ChatGPT. The entire chat history is available in others/llms/usage.txt.
 

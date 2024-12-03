@@ -94,7 +94,6 @@ kable(variable_table,
 To more clearly display and understand the analysis data, @tbl-cleaned-data is a preview of the cleaned data table.
 
 
-
 ```{r}
 #| label: tbl-data-summary
 #| tbl-cap: "Summary Statistics of Cleaned Bike Theft Data"
@@ -121,11 +120,7 @@ The summary statistics in the @tbl-data-summary show key discoveries about the c
 
 ## Measurement
 	
-The measurement process for obtaining bicycle theft data involves transforming real-world events into a structured dataset, such as the Toronto Police Service's bicycle theft records. This dataset is a product of the process by which bicycle thefts are reported to the police and is primarily obtained through online reporting tools or direct communication with law enforcement.
-
-The reporting process for bicycle thefts under 5,000 dollars requires the victim to provide as much detailed information as possible, including the serial number, customizations (e.g., unique colors or features), and the estimated value of the bicycle. This information is important to ensure the accuracy and traceability of individual cases in the dataset. Bicycles reported must have a value of less than 5,000 dollars or they will be reported through a different channel that differentiates between minor and major thefts.
-
-Once a report is submitted, it is reviewed by the appropriate authorities and, if verified, the incident becomes an entry in the dataset used for analysis. Researchers can then analyze this data to identify patterns and trends, examining variables such as time of theft and location types. This methodical approach effectively links real-world theft events with their analytical representations, enabling a thorough examination of the dynamics and risk factors tied to different locations and premises within the dataset. This structured data transformation process is essential for generating ideas about bicycle theft, providing a foundation for strategies to mitigate these incidents effectively. These attributes help to understand the context of each burglary and allow for further analysis to identify burglary patterns or high-risk areas.
+The measurement process for obtaining bicycle theft data involves transforming real-world events into a structured dataset, such as the Toronto Police Service's bicycle theft records. This dataset is a product of the process by which bicycle thefts are reported to the police and is primarily obtained through online reporting tools or direct communication with law enforcement. The reporting process for bicycle thefts under 5,000 dollars requires the victim to provide as much detailed information as possible, including the serial number, customizations (e.g., unique colors or features), and the estimated value of the bicycle. This information is important to ensure the accuracy and traceability of individual cases in the dataset. Bicycles reported must have a value of less than 5,000 dollars or they will be reported through a different channel that differentiates between minor and major thefts. Once a report is submitted, it is reviewed by the appropriate authorities and, if verified, the incident becomes an entry in the dataset used for analysis. Researchers can then analyze this data to identify patterns and trends, examining variables such as time of theft and location types. This methodical approach effectively links real-world theft events with their analytical representations, enabling a thorough examination of the dynamics and risk factors tied to different locations and premises within the dataset,  providing a foundation for strategies to mitigate these incidents effectively. 
 
 ## Data visualization
 
@@ -166,7 +161,7 @@ analysis_data %>%
 
 ```{r}
 #| label: fig-hour-bike-thefts
-#| fig-cap: "Time-Specific Patterns in Bike Thefts: Hourly Distribution Analysis"
+#| fig-cap: "Time-Specific Patterns in Bike Thefts: Hourly Distribution Plot"
 #| echo: false
 #| warning: false
 #| message: false
@@ -238,19 +233,24 @@ The goal of the model is to determine how different factors impact the probabili
 \end{align}
 
 
-The Bayesian logistic regression model predicts the likelihood of a bike theft ($y_i$), where ($y_i = 1$) indicates a theft and ($y_i = 0$) otherwise. The model includes several predictors: $X_{\text{Occurrence Hour},i}$ captures the hour of the day (0–23) to identify temporal patterns in theft likelihood, and $X_{\text{Occurrence Month},i}$ represents the month (1–12) to account for seasonal variations. $X_{\text{Premises Type},i}$ categorizes the theft locations into "Apartment" (the baseline category), "House", "Outdoors", and "Other", examining how location influences theft probability. Additionally, $X_{\text{Bike Cost},i}$ is a continuous variable representing the bike's reported value, hypothesizing that higher values may increase theft likelihood due to perceived value.
+The Bayesian logistic regression model predicts the likelihood of a bike theft **($y_i$)**, where **($y_i = 1$)** indicates a theft and **($y_i = 0$)** otherwise. The model includes several predictors:
 
-Specifically, $\beta_1$ relates to $X_{\text{Occurrence Hour},i}$, exploring how different hours affect the log-odds of theft, while $\beta_2$ for $X_{\text{Occurrence Month},i}$ examines how theft likelihood fluctuates monthly. The coefficients $\beta_3$ for $X_{\text{Premises Type},i}$ show the variation in theft log-odds for "House", "Outdoors", and "Other" compared to the baseline "Apartment". For example, a positive $\beta_3$ for "House" would imply higher log-odds of theft in house settings compared to apartments. Lastly, $\beta_4$ for $X_{\text{Bike Cost},i}$ quantifies how the bike's cost impacts theft risk, suggesting that more expensive bikes are more likely targets.
+- **$X_{\text{Occurrence Hour},i}$** :Represents the hour of the day, ranging from 0 to 23. This variable is used to identify temporal patterns that may affect the likelihood of bike theft at different times of the day.
+- **$X_{\text{Occurrence Month},i}$** :Indicates the month, numbered from 1 to 12.
 
-These $\beta$ coefficients are essential for understanding how variables such as $X_{\text{Occurrence Hour},i}$, $X_{\text{Occurrence Month},i}$, and $X_{\text{Premises Type},i}$ influence the likelihood of a reported bike theft. Analyzing these relationships helps pinpoint specific patterns in theft occurrences, showing whether certain times of day, types of premises, or bike cost ranges significantly alter theft risk.
+- **$X_{\text{Premises Type},i}$** : Categorizes the location of the theft into one of several types: "Apartment" (used as the baseline category), "House", "Outdoors", and "Other". 
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+- **$X_{\text{Bike Cost},i}$** :A continuous variable that represents the reported monetary value of the bicycle.
+
+Specifically, **$\beta_1$** relates to **$X_{\text{Occurrence Hour},i}$**, exploring how different hours affect the log-odds of theft, while **$\beta_2$** for **$X_{\text{Occurrence Month},i}$** examines how theft likelihood fluctuates monthly. The coefficients $\beta_3$ for **$X_{\text{Premises Type},i}$** show the variation in theft log-odds for "House", "Outdoors", and "Other" compared to the baseline "Apartment". For example, a positive **$\beta_3$** for "House" would imply higher log-odds of theft in house settings compared to apartments. Lastly, **$\beta_4$** for **$X_{\text{Bike Cost},i}$** quantifies how the bike's cost impacts theft risk, suggesting that more expensive bikes are more likely targets. Analyzing these relationships helps pinpoint specific patterns in theft occurrences, showing whether certain times of day, types of premises, or bike cost ranges significantly alter theft risk.
+
+We run the model in R [@citeR] using the `rstanarm` package of @citerstanarm. We use the default priors from `rstanarm`.
 
 ### Model justification
 
-The Bayesian logistic regression model was chosen based on prior knowledge about factors influencing bike theft. For instance, premises type and residential status are expected to have different theft risks based on environmental characteristics, while bike cost reflects the value of the stolen item, which might influence the likelihood of theft. Bayesian regression allows us to incorporate this prior understanding through weakly informative priors, enhancing the model's ability to capture these relationships. Additionally, variables like occurrence hour and premises type may exhibit complex patterns that the Bayesian approach can better account for by combining prior knowledge with observed data. The model provides not only point estimates but also posterior distributions, enabling a clearer understanding of uncertainty in each predictor's impact. However, the model assumes a linear relationship between predictors and the log-odds of theft, as well as independence between theft events. However, these assumptions may be limiting. For example, if theft events are highly correlated spatially or temporally—such as clusters of thefts occurring in the same area or during specific times—the model may not accurately capture these patterns.
+The Bayesian logistic regression model was chosen based on prior knowledge about factors influencing bike theft. This model helps us understand how different factors like where the bike is and how much it costs might make theft more likely. We use priors in the model, which means we start with an initial guess based on previous knowledge and then update this as we get more data. This method is good for figuring out complex behaviors from the data, like when thefts happen more often or in certain places. The model doesn’t just give us a single number; it shows a range of possible outcomes, which helps us understand the uncertainty or reliability of our predictions. However, the model assumes that each theft is independent and that the relationship between the factors we study and theft is straightforward. This could be a problem if, for example, thefts happen in clusters or at specific times and places, which our model might not pick up accurately.
 
-The model comparison indicates that both the Bayesian logistic regression model and the frequentist logistic regression model achieved identical accuracy scores of 98.57% on the test dataset. This high accuracy suggests that both models effectively captured the relationship between the predictor variables (e.g., Occurrence_Hour, Occurrence_Month, Premises_Type, Bike_Cost) and the binary outcome (Theft_Status). The process of comparing these models involved splitting the dataset into training (80%) and testing (20%) subsets to evaluate their predictive performance on unseen data. Both models were trained on the training set, with their predictions compared against the actual values in the test set. Classifications were made using a threshold of 0.5 for predicted probabilities, and accuracy was computed as the proportion of correctly classified cases. These results demonstrate that both modeling approaches are highly effective for this particular dataset, yielding near-identical predictive performance.
+The model comparison shows that both the Bayesian logistic regression model and the frequentist logistic regression model achieved identical accuracy scores of 98.57% on the test dataset. This high accuracy suggests that both models effectively captured the relationship between the predictor variables (e.g., Occurrence_Hour, Occurrence_Month, Premises_Type, Bike_Cost) and the binary outcome (Theft_Status). The process of comparing these models involved splitting the dataset into training (80%) and testing (20%) subsets to evaluate their predictive performance on unseen data. Both models were trained on the training set, with their predictions compared against the actual values in the test set. Classifications were made using a threshold of 0.5 for predicted probabilities, and accuracy was computed as the proportion of correctly classified cases. These results demonstrate that both modeling approaches are highly effective for this particular dataset, yielding near-identical predictive performance.
 
 While both the Bayesian and frequentist logistic regression models achieved identical accuracy scores, the Bayesian approach offers several advantages that make it particularly useful. Bayesian models provide a probabilistic framework that incorporates prior knowledge into the analysis, allowing for more informed and interpretable results. For example, priors can regularize estimates, particularly in cases where the dataset is small or certain predictors are sparse, reducing the risk of overfitting. Additionally, Bayesian models generate full posterior distributions for parameter estimates, rather than single point estimates, which offers a richer understanding of the uncertainty and variability of the parameters. This is especially beneficial for decision-making processes that rely on quantifying uncertainty, as it provides credible intervals rather than just confidence intervals, which are more interpretable in probabilistic terms. Thus, even though the predictive performance of both models is comparable in this instance, the Bayesian approach offers additional interpretative benefits, particularly in scenarios with limited or uncertain data.
 
@@ -379,12 +379,11 @@ Finally, our study suggests several practical measures that could be implemented
 
 # Idealized Methodology of Toronto Police Service
 
-## Methodology Framework
-### Introduction to the Bike Theft Analysis Methodology
+## Introduction to the Bike Theft Analysis Methodology
 
 The Toronto Police Service (TPS) has developed a practical methodology to analyze bike thefts, grounded in rigorous data collection, community engagement, and evidence-based practices. The approach aims to identify patterns, improve preventive measures, and foster community trust through transparency and collaboration. By combining statistical rigor with public feedback, TPS ensures that its strategy for addressing bike theft is not only data-directed but also reflective of the real-world experiences of Toronto residents.
 
-### Survey and Sampling Methodology
+## Survey and Sampling Methodology
 
 At the core of TPS's methodology is a well-designed survey designed to gather detailed opinions on the experiences, perceptions, and demographic factors related to bike theft within Toronto's community. The survey is structured to capture a diverse range of information, including demographic data (e.g., age, gender, income level, and ethnicity), theft-specific details (e.g., theft locations, times, and preventive measures used), and perceptions of the effectiveness of police interventions. This rich dataset allows TPS to identify the groups most affected by bike theft, assess the effectiveness of existing strategies, and pinpoint areas for targeted improvements in theft prevention and response measures.
 
@@ -400,14 +399,13 @@ To ensure inclusivity, the survey is translated into multiple languages commonly
 
 This rigorous approach to survey design and sampling methodology ensures that the data collected is reliable, representative, and methodologically sound, providing a reliable foundation for TPS’s analysis of bike theft and the development of targeted, data-directed interventions.
 
-### Recruitment Process
+## Recruitment Process
 
 Recruiting participants for the survey involves a combination of online and in-person strategies to reach a wide audience. TPS uses its existing communication channels, such as email newsletters and social media platforms, to inform the public about the survey and encourage participation. Flyers are distributed at bike shops, community centers, and public libraries to reach individuals who may not be actively engaged online. Partnerships with local cycling advocacy groups further enhance recruitment efforts by leveraging their networks to connect with frequent bike users.
 
 To incentivize participation, TPS offers small rewards, such as \$10 gift cards for bike accessories or discounts at local bike shops. Additionally, participants are entered into a draw for larger prizes, such as premium bike locks or helmets. This strategy not only boosts participation rates but also demonstrates TPS's commitment to supporting the cycling community.
 
-## Data Collection and Analysis
-### Data Collection Protocol
+## Data Collection Protocol
 
 The data collection process employed by TPS is well-designed to prioritize accuracy, inclusivity, and reliability, ensuring the data reflects the diverse experiences and perspectives of Toronto’s population. A mixed-method approach is utilized to accommodate varying preferences and technological access among participants. Online surveys are hosted on secure and user-friendly platforms, such as Qualtrics or SurveyMonkey, enabling respondents to complete the survey at their convenience using computers, tablets, or smartphones. Security measures, including encryption and unique access codes, are implemented to protect respondent privacy and prevent unauthorized access. Notifications and reminders are sent via email or SMS to encourage timely completion of the survey.
 
@@ -425,7 +423,7 @@ After the initial data collection phase, a dedicated quality assurance team revi
 
 By combining advanced technology, multilingual accessibility, rigorous quality controls, and community-centric practices, TPS’s data collection process sets a high standard for reliability and inclusivity. This methodology ensures that the data collected is both complete and accurate, forming a solid foundation for evidence-based policy recommendations and community safety initiatives.
 
-### Statistical Analysis of Survey and Police Data
+## Statistical Analysis of Survey and Police Data
 
 
 Once the data is collected and validated, TPS employs a full analytical framework to extract a meaningful understanding of bike theft patterns. The process begins with descriptive statistics, summarizing the frequency, distribution, and scale of theft incidents across Toronto. Metrics such as theft counts by neighborhood, time of occurrence, and bike cost provide an overview of the issue, while cross-tabulations show relationships between variables like theft location, time of day, and premises type. For example, such analysis may show that thefts are more frequent in high-traffic areas during evening hours or that high-value bikes are disproportionately targeted.
@@ -436,8 +434,7 @@ Temporal and predictive modeling also play an essential role. Time-series models
 
 Throughout the process, TPS ensures analytical rigor by validating model assumptions, testing sensitivity to input changes, and cross-referencing findings with historical data. The ideas derived not only inform internal strategies, such as patrol scheduling and resource allocation but also support community outreach by providing clear, actionable recommendations. This complex approach ensures that TPS’s response to bike theft is data-directed, targeted, and effective.
 
-## Implementation and Community Engagement
-### Budget Allocation and Resource Management
+## Budget Allocation and Resource Management
 
 TPS allocates its resources strategically to ensure the effectiveness of the methodology while maintaining fiscal responsibility. The survey design phase is allocated \$15,000, which includes \$5,000 for developing and translating questions into multiple languages to ensure accessibility, \$6,000 for conducting pilot tests to refine the survey instrument, and \$4,000 for printing and distribution of survey materials. An additional \$10,000 is allocated for training survey administrators, ensuring they are well-equipped to manage both in-person and online data collection efforts effectively. The purchase of equipment, such as tablets for data entry during in-person surveys, is budgeted at \$8,000. Licensing software for advanced data analysis and visualization tools, such as statistical packages and mapping software, accounts for another \$7,000.
 
@@ -447,26 +444,26 @@ Additional funds of \$15,000 are set aside for community engagement activities t
 
 By clearly defining and adhering to this detailed \$70,000 budget, TPS ensures that the project remains financially sustainable while delivering high-quality, actionable results to reduce bike theft and enhance community safety.
 
-### Community Engagement and Feedback Integration
+## Community Engagement and Feedback Integration
 
 Community engagement is a cornerstone of TPS's bike theft methodology. Throughout the process, TPS actively seeks input from residents to validate findings and refine strategies. Public meetings are held in neighborhoods with high theft rates to share preliminary results and gather feedback. These sessions provide an opportunity for residents to voice their concerns, share their experiences, and suggest solutions.
 
 The feedback collected during these sessions is integrated into the analysis to ensure that the findings reflect the community's lived experiences. For instance, residents might highlight specific locations or times of day that are particularly prone to theft, which can then be incorporated into the hot spot mapping analysis. This iterative process strengthens the validity of the results and fosters trust between TPS and the community.
 
-## Reporting and Conclusion
-### Transparency and Reporting
+
+## Transparency and Reporting
 
 To build trust and accountability, TPS places a strong emphasis on transparency throughout the methodology. Detailed documentation is prepared at each stage of the process, explaining how data is collected, validated, and analyzed. This documentation is made publicly available, along with summary reports that highlight key findings and actionable recommendations.
 
 Reports are designed to be accessible and engaging, featuring clear visualizations such as maps and charts to communicate complex information effectively. These reports are shared with stakeholders, including policymakers, cycling advocacy groups, and the general public, to ensure that the findings inform decision-making and contribute to community safety initiatives.
 
-### Conclusion
+## Conclusion
 
 The idealized methodology of the Toronto Police Service for analyzing bike theft exemplifies a community-centered approach to data-directed policing. By combining rigorous statistical analysis with strong community engagement and transparent reporting, TPS not only enhances its understanding of bike theft patterns but also builds trust with the communities it serves. This methodology serves as a model for other cities seeking to address similar challenges and demonstrates the value of integrating data, community input, and evidence-based strategies into policing efforts.
 
 
 # Data details {#sec-data-details}
-
+@tbl-cleaned-data shows the preview of the Cleaned Bike Theft Dataset.
 ```{r}
 #| label: tbl-cleaned-data
 #| tbl-cap: "Preview of Cleaned Bike Theft Data "
@@ -489,6 +486,7 @@ knitr::kable(preview_table, align = "c") |>
 # Model details {#sec-model-details}
 
 ## Posterior prediction check
+
 ```{r}
 #| eval: true
 #| echo: false
