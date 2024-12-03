@@ -1,12 +1,12 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Changing Dynamics of Urban Bike Thefts: Understanding Trends to Inform Future Prevention Efforts"
+subtitle: "A Replication Quantitative Analysis Using Toronto Police Data (2014-2024)"
 author: 
   - Jin Zhang
 thanks: "Code and data are available at: https://github.com/KrystalJin1/Toronto_Bike_Theft_Analysis.git "
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study utilizes a decade of Toronto Police Service data spanning from 2014 to 2024 to examine the dynamics of bicycle thefts, focusing specifically on monthly and hourly variations, as well as the influence of different locations. Analysis reveals that the theft rates are higher in summer months and during late evening hours under the apartment buildings. This research highlights critical insights into urban crime patterns, providing valuable information for enhancing security measures and planning urban safety strategies effectively."
 format: pdf
 number-sections: true
 toc: true
@@ -29,6 +29,7 @@ library(arrow)
 library(bayesplot)
 library(ggplot2)
 library(styler)
+library(plumber)
 ```
 
 \newpage
@@ -48,7 +49,7 @@ Telegraphing paragraph: The remainder of this paper is structured as follows. @s
 
 
 # Data {#sec-data}
-We used the R programming language [@citeR] to analyze the data and plot the graphs for this paper. The folder structure for this paper follows the starter folder created by [@rohan]. I also referenced many of the examples and techniques provided by Telling Stories with Data [@alexander2023telling], which helped me understand how to visualize the data and communicate the findings effectively. In addition, the `tidyverse` [@citetidyverse] packages are essential for simplifying data cleaning and analysis.`styler` [@citestyler] is used in arranging code style. I also plotted the graphs with `ggplot2` [@citeggplot2] and read the CSV file with `here` [@citehere]. We used the `knitr` [@citeknitr] to show the table.The `rstanarm` package [@citerstanarm] allowed us to fit Bayesian regression models using Hamiltonian Monte Carlo. For improving the appearance and functionality of our tables, we employed the `kableExtra` package [@citekableExtra]. Data import and processing were facilitated by the `readr` package [@citereadr] for fast and efficient reading of tabular data, and the `arrow` package [@citearrow] for reading and writing data in various formats including Parquet. The `modelsummary` package [@citemodelsummary] provided tools to summarize and present regression model outputs in a convenient and customizable way. Visualizations of Bayesian models were created using the `bayesplot` package [@citebayesplot] and `styler` [@citestyler] used in arranging code style.
+We used the R programming language [@citeR] to analyze the data and plot the graphs for this paper. The folder structure for this paper follows the starter folder created by [@rohan]. I also referenced many of the examples and techniques provided by Telling Stories with Data [@alexander2023telling], which helped me understand how to visualize the data and communicate the findings effectively. In addition, the `tidyverse` [@citetidyverse] packages are essential for simplifying data cleaning and analysis.`styler` [@citestyler] is used in arranging code style. I also plotted the graphs with `ggplot2` [@citeggplot2] and read the CSV file with `here` [@citehere]. We used the `knitr` [@citeknitr] to show the table.The `rstanarm` package [@citerstanarm] allowed us to fit Bayesian regression models using Hamiltonian Monte Carlo. For improving the appearance and functionality of our tables, we employed the `kableExtra` package [@citekableExtra]. Data import and processing were facilitated by the `readr` package [@citereadr] for fast and efficient reading of tabular data, and the `arrow` package [@citearrow] for reading and writing data in various formats including Parquet. The `modelsummary` package [@citemodelsummary] provided tools to summarize and present regression model outputs in a convenient and customizable way. Visualizations of Bayesian models were created using the `bayesplot` package [@citebayesplot] and `styler` [@citestyler] used in arranging code style.We also use the `plumber` [@citeplumber] to build the API. 
 
 ## Data Source
 
@@ -127,8 +128,6 @@ The measurement process for obtaining bicycle theft data involves transforming r
 The reporting process for bicycle thefts under 5,000 dollars requires the victim to provide as much detailed information as possible, including the serial number, customizations (e.g., unique colors or features), and the estimated value of the bicycle. This information is critical to ensure accuracy and traceability of individual cases in the dataset. Bicycles reported must have a value of less than 5,000 dollars or they will be reported through a different channel that differentiates between minor and major thefts.
 
 Once a report is submitted, it is reviewed by the appropriate authorities and, if verified, the incident becomes an entry in the dataset used for analysis. Researchers can then analyze this data to identify patterns and trends, examining variables such as time of theft and location types. This methodical approach effectively links real-world theft events with their analytical representations, enabling a thorough examination of the dynamics and risk factors tied to different locations and premises within the dataset. This structured data transformation process is essential for generating insights into bicycle theft, providing a foundation for strategies to mitigate these incidents effectively. These attributes help to understand the context of each burglary and allow for further analysis to identify burglary patterns or high-risk areas.
-
-
 
 ## Data visualization
 
@@ -255,6 +254,11 @@ The Bayesian logistic regression model was chosen based on prior knowledge about
 Model comparison indicates that both the Bayesian logistic regression model and the frequentist logistic regression model achieved identical accuracy scores of 98.57% on the test dataset. This high accuracy suggests that both models effectively captured the relationship between the predictor variables (e.g., Occurrence_Hour, Occurrence_Month, Premises_Type, Bike_Cost) and the binary outcome (Theft_Status). The process of comparing these models involved splitting the dataset into training (80%) and testing (20%) subsets to evaluate their predictive performance on unseen data. Both models were trained on the training set, with their predictions compared against the actual values in the test set. Classifications were made using a threshold of 0.5 for predicted probabilities, and accuracy was computed as the proportion of correctly classified cases. These results demonstrate that both modeling approaches are highly effective for this particular dataset, yielding near-identical predictive performance.
 
 While both the Bayesian and frequentist logistic regression models achieved identical accuracy scores, the Bayesian approach offers several advantages that make it particularly valuable. Bayesian models provide a probabilistic framework that incorporates prior knowledge into the analysis, allowing for more informed and interpretable results. For example, priors can regularize estimates, particularly in cases where the dataset is small or certain predictors are sparse, reducing the risk of overfitting. Additionally, Bayesian models generate full posterior distributions for parameter estimates, rather than single point estimates, which offers richer insights into the uncertainty and variability of the parameters. This is especially beneficial for decision-making processes that rely on quantifying uncertainty, as it provides credible intervals rather than just confidence intervals, which are more interpretable in probabilistic terms. Thus, even though the predictive performance of both models is comparable in this instance, the Bayesian approach offers additional interpretative benefits and robustness, particularly in scenarios with limited or uncertain data.
+
+### API for Predictive Analysis
+In addition to the statistical methods applied in our study, we utilized a specifically developed API to predict bike theft incidents based on several variables including the hour of the day, month of the year, premises type, and the cost of the bike. This API, built using the `plumber` and `rstanarm` packages, leverages a Bayesian logistic regression model trained on historical data from 2014 to 2024, as sourced from the Toronto Police Service. The API's predictive functionality allows us to dynamically assess the risk of bike theft by integrating real-time data inputs, offering a practical application for our research findings.
+
+The API processes input variables such as the occurrence hour and month, type of premises, and bike cost to estimate the probability of a theft. This is done by calculating the odds of theft using the model's posterior samples for each input factor. The resulting predictions provide insights into the patterns of theft across different times and locations, demonstrating how these factors influence bike theft risk. This predictive tool not only validates our analytical models but also serves as a bridge between theoretical research and practical, real-world application, enhancing the utility of our findings for urban safety and crime prevention strategies.
 
 
 ### Model validation

@@ -1,15 +1,18 @@
-# Starter folder
+# Changing Dynamics of Urban Bike Thefts: Understanding Trends to Inform Future Prevention Efforts
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+This repository houses the analysis of bike theft patterns in Toronto, from 2014 to 2024. Using the data sourced from the Toronto Police Service Public Safety Data Portal, this project applies Bayesian logistic regression models to evaluate how different variables such as time of day, month, and location influence bike theft incidents.
+
+To utilize the resources in this repository, click the green "Code" button, then "Download ZIP". Once downloaded, move the folder to your desired working directory on your computer, and adapt the contents as necessary for your analysis and reporting.
 
 
 ## File Structure
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from X.
+-   `data/raw_data` contains the raw data as obtained from Toronto Police Service Public Safety Data Portal.
+-   `data/simulated_data` simulates a dataset of Bike Theft according to cleaned data. 
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
@@ -22,9 +25,3 @@ The repo is structured as:
 Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
 
 ## Some checks
-
-- [ ] Change the rproj file name so that it's not starter_folder.Rproj
-- [ ] Change the README title so that it's not Starter folder
-- [ ] Remove files that you're not using
-- [ ] Update comments in R scripts
-- [ ] Remove this checklist
