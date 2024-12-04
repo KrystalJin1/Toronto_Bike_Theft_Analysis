@@ -30,6 +30,8 @@ library(bayesplot)
 library(ggplot2)
 library(styler)
 library(plumber)
+library(testthat)
+library(dplyr)
 ```
 
 \newpage
@@ -47,7 +49,7 @@ Our findings indicate that bike theft is significantly influenced by the type of
 The paper is structured as follows: @sec-data describes the data used for analysis, @sec-model describes how to set up, justify, and validate the model, and @sec-results displays the interpretations of the model alongside other findings gained from analysis of the data. @sec-discussion discusses the implications, limitations of the paper, and future expectations.
 
 # Data {#sec-data}
-We used the R programming language [@citeR] to analyze the data and plot the graphs for this paper. The folder structure for this paper follows the starter folder created by [@rohan]. I also referenced many of the examples and techniques provided by Telling Stories with Data [@alexander2023telling], which helped me understand how to visualize the data and communicate the findings effectively. In addition, the `tidyverse` [@citetidyverse] packages are essential for simplifying data cleaning and analysis.`styler` [@citestyler] is used in arranging code style. I also plotted the graphs with `ggplot2` [@citeggplot2] and read the CSV file with `here` [@citehere]. We used the `knitr` [@citeknitr] to show the table. The `rstanarm` package [@citerstanarm] allowed us to fit Bayesian regression models using Hamiltonian Monte Carlo. To improve the appearance and functionality of our tables, we employed the `kableExtra` package [@citekableExtra]. Data import and processing were facilitated by the `readr` package [@citereadr] for fast and efficient reading of tabular data, and the `arrow` package [@citearrow] for reading and writing data in various formats including Parquet. The `modelsummary` package [@citemodelsummary] provided tools to summarize and present regression model outputs in a convenient and customizable way. Visualizations of Bayesian models were created using the `bayesplot` package [@citebayesplot]. We also use the `plumber` [@citeplumber] to build the API. 
+We used the R programming language [@citeR] to analyze the data and plot the graphs for this paper. The folder structure for this paper follows the starter folder created by [@rohan]. I also referenced many of the examples and techniques provided by Telling Stories with Data [@alexander2023telling], which helped me understand how to visualize the data and communicate the findings effectively. In addition, the `tidyverse` [@citetidyverse] packages are essential for simplifying data cleaning and analysis.`styler` [@citestyler] is used in arranging code style. I also plotted the graphs with `ggplot2` [@citeggplot2] and read the CSV file with `here` [@citehere]. We used the `knitr` [@citeknitr] to show the table. The `rstanarm` package [@citerstanarm] allowed us to fit Bayesian regression models using Hamiltonian Monte Carlo. To improve the appearance and functionality of our tables, we employed the `kableExtra` package [@citekableExtra]. Data import and processing were facilitated by the `readr` package [@citereadr] for fast and efficient reading of tabular data, and the `arrow` package [@citearrow] for reading and writing data in various formats including Parquet. The `modelsummary` package [@citemodelsummary] provided tools to summarize and present regression model outputs in a convenient and customizable way. Visualizations of Bayesian models were created using the `bayesplot` package [@citebayesplot]. We also use the `plumber` [@citeplumber] to build the API, `citetestthat` [@citetestthat] to test the data and `dplyr` [@citedplyr] for data manipulation.
 
 ## Data Source
 
@@ -127,11 +129,11 @@ The measurement process for obtaining bicycle theft data involves transforming r
 
 ```{r}
 #| label: fig-month-premises-type-status
-#| fig-cap: "Seasonal Patterns of Bicycle Theft Across Different Premises Types"
+#| fig-cap: "Monthly Bicycle Theft Analysis: A graph shows seasonal trends in bicycle theft among different premises types, highlighting that theft is highest in outdoor locations during the summer months."
 #| echo: false
 #| warning: false
 #| message: false
-#|
+
 # Create a bar chart for the cleaned data
 analysis_data %>%
   filter(!is.na(Occurrence_Month)) %>%
@@ -161,7 +163,7 @@ analysis_data %>%
 
 ```{r}
 #| label: fig-hour-bike-thefts
-#| fig-cap: "Time-Specific Patterns in Bike Thefts: Hourly Distribution Plot"
+#| fig-cap: "Time-specific patterns of bicycle theft: hourly distribution with peaks in the later hours."
 #| echo: false
 #| warning: false
 #| message: false
@@ -182,7 +184,7 @@ ggplot(analysis_data, aes(x = Occurrence_Hour, fill = as.factor(Theft_Status))) 
 
 ```{r}
 #| label: fig-bike-cost-distribution
-#| fig-cap: "Distribution of Stolen Bicycle Costs"
+#| fig-cap: "Distribution of Stolen Bicycle Costs: Cheaper bikes are more dangerous"
 #| echo: false
 #| warning: false
 #| message: false
