@@ -274,12 +274,11 @@ Here we briefly describe the evidence and the detailed graph and plot for model 
 
 # Results {#sec-results}
 
-@tbl-bike-theft-outcome has provided the following results for the predictors of bike theft: The odds of a bike theft occurring increase slightly with each additional hour of the day, as evidenced by the odds ratio (OR) for Hour of Occurrence at 1.02 with a 95% credible interval ranging from 1.00 to 1.04. Similarly, the odds ratio for the Month of Occurrence is 1.01, with its credible interval spanning from 0.97 to 1.06, suggesting only a marginal change in theft likelihood across months.
+@tbl-bike-theft-outcome analyzes the factors predicting bike theft using a logistic regression model, we observed several meaningful trends. An increase in the hour slightly raises the probability of theft, with an odds ratio (OR) of 1.01, indicating that the risk of theft gradually increases later in the day. Calculated monthly, the odds ratio is 1.06, suggesting a slight rise in theft likelihood throughout the year, peaking in December, though the impact is not very pronounced.
 
-For location-based predictors, thefts are significantly more likely to occur at Outdoor Premises with an OR of 1.51, and a credible interval from 1.01 to 2.26, indicating a clear increase in risk compared to other premises. Conversely, Residential Premises show an OR of 0.96, with a credible interval of 0.71 to 1.31, suggesting a slightly lower likelihood of thefts at these locations relative to others. The influence of Bike Cost per $1000 increase on theft likelihood is relatively neutral, with an OR nearly at 1 (0.99) and a credible interval between 0.78 and 1.27, indicating that the bike's cost does not significantly alter the odds of it being stolen.
+Significant differences exist in the theft risk across various premises types. Bicycles inside houses have a lower likelihood of theft (OR = 0.51), possibly due to better security measures, whereas those outdoors have a higher probability of being stolen (OR = 0.68), likely because they are easier to access for thieves. The probability of theft is also higher in other places such as educational, commercial, and transit locations, possibly due to less supervision and more anonymity for thieves. As the baseline, apartments show the highest probability, perhaps because bicycles are densely parked and more exposed, making them easier targets for coordinated thefts.
 
-These results highlight the importance of the theft location, particularly outdoor settings, in predicting bike theft occurrences, while temporal factors such as the hour and month of the incident, and the cost of the bike show minimal to no significant impact on the likelihood of theft.
-
+Interestingly, adjusting the bike cost in $1000 increments instead of $1 makes the effect size more interpretable and avoids insignificant fluctuations that would be meaningless on such a small scale. The impact of bike cost on theft probability is neutral (OR = 0.89), indicating that the value of a bike does not significantly affect the likelihood of its theft. This comprehensive analysis shows that location has a major impact on theft risk, while temporal factors and bike value have minimal or negligible effects.
 
 ```{r}
 #| label: tbl-bike-theft-outcome
@@ -623,7 +622,6 @@ plot(Bike_Theft_model, "rhat")
 
 
 
-\newpage
 \clearpage
 
 # References
