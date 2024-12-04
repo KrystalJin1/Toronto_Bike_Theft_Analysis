@@ -6,7 +6,7 @@ author:
 thanks: "Code and data are available at: https://github.com/KrystalJin1/Toronto_Bike_Theft_Analysis.git "
 date: today
 date-format: long
-abstract: "This study utilizes a decade of Toronto Police Service data spanning from 2014 to 2024 to examine the dynamics of bicycle thefts, focusing specifically on monthly and hourly variations, as well as the influence of different locations. Analysis shows that the theft rates are higher in the summer months and during late evening hours under the apartment buildings. This research highlights an important understanding of urban crime patterns, providing useful information for enhancing security measures and planning urban safety strategies effectively."
+abstract: "This study utilizes a decade of Toronto Police Service data spanning from 2014 to 2024 to examine the dynamics of bicycle thefts, focusing specifically on monthly and hourly variations, as well as the influence of different locations. A Bayesian logistic regression model was used to analyze how these factors correlate with theft incidents, offering a reliable methodological approach for handling this data. Analysis shows that the theft rates are higher in the summer months and during late evening hours under the apartment buildings. This research emphasizes the urgent need for targeted security enhancements at high-risk times and locations, suggesting increased surveillance and better bike storage solutions to decrease bicycle thefts in urban settings."
 format: pdf
 number-sections: true
 toc: true
