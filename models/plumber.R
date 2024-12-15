@@ -1,3 +1,12 @@
+#### Preamble ####
+# Purpose: Set an API for the model.
+# Author: Jin Zhang
+# Date: 26 Novemeber 2024
+# Contact: kry.zhang@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: No
+# Any other information needed? No.
+
 library(plumber)
 library(rstanarm)
 library(tidyverse)
